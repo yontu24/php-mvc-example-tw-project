@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="521aeb20-c5e7-459d-8977-611a92a4c977" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YlvZyuMV1bBbKNDaSLGG3QlbTd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="521aeb20-c5e7-459d-8977-611a92a4c977" name="Default Changelist" comment="" />
+      <created>1583530054327</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583530054327</updated>
+      <workItem from="1583530056084" duration="5346000" />
+      <workItem from="1583597733335" duration="301000" />
+      <workItem from="1583601941119" duration="4128000" />
+      <workItem from="1583668072542" duration="5041000" />
+      <workItem from="1583675740670" duration="8000" />
+      <workItem from="1583681584100" duration="1109000" />
+      <workItem from="1583750874938" duration="6000" />
+      <workItem from="1583762795475" duration="33000" />
+      <workItem from="1583764812416" duration="2717000" />
+      <workItem from="1583782124408" duration="7000" />
+      <workItem from="1583861208573" duration="7233000" />
+      <workItem from="1583875925302" duration="5000" />
+      <workItem from="1583876824661" duration="7404000" />
+      <workItem from="1583884268376" duration="79000" />
+      <workItem from="1583913450767" duration="49000" />
+      <workItem from="1583922776754" duration="2891000" />
+      <workItem from="1583938467006" duration="10727000" />
+      <workItem from="1583956108908" duration="1207000" />
+      <workItem from="1584003366164" duration="60000" />
+      <workItem from="1584183198400" duration="1315000" />
+      <workItem from="1584184840224" duration="5000" />
+      <workItem from="1584184865872" duration="3000" />
+      <workItem from="1584185265090" duration="225000" />
+      <workItem from="1584191739785" duration="957000" />
+      <workItem from="1584194203167" duration="965000" />
+      <workItem from="1584270765480" duration="4000" />
+      <workItem from="1590655111604" duration="7431000" />
+      <workItem from="1590676875200" duration="3187000" />
+      <workItem from="1590680408088" duration="2411000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="313" y="59" width="848" height="684" key="#Project_Structure" timestamp="1583530061261">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="313" y="59" width="848" height="684" key="#Project_Structure/70.27.1296.741@70.27.1296.741" timestamp="1583530061261" />
+    <state x="401" y="110" width="540" height="524" key="StructurePopup" timestamp="1590659038837">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="401" y="110" width="540" height="524" key="StructurePopup/0.0.1360.738@0.0.1360.738" timestamp="1590659038837" />
+    <state x="319" y="197" key="com.intellij.ide.util.TipDialog" timestamp="1590756706149">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="319" y="197" key="com.intellij.ide.util.TipDialog/0.0.1360.738@0.0.1360.738" timestamp="1590756706149" />
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog/70.27.1296.741@70.27.1296.741" timestamp="1584270765726" />
+    <state x="336" y="165" key="run.anything.popup" timestamp="1590659708993">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="336" y="165" key="run.anything.popup/0.0.1360.738@0.0.1360.738" timestamp="1590659708993" />
+    <state x="326" y="62" width="706" height="676" key="search.everywhere.popup" timestamp="1590680676816">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="326" y="62" width="706" height="676" key="search.everywhere.popup/0.0.1360.738@0.0.1360.738" timestamp="1590680676816" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1583864294386" />
+  </component>
+</project>
