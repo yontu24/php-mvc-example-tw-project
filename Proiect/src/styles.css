@@ -3,15 +3,9 @@
     position: fixed;
     background: black;
     height: 70px;
-    width: 100vw;
-    padding: 0;
+    width: 100%;
     top: 0;
     transition: height 600ms ease;
-}
-
-.navbar-ul:hover
-{
-
 }
 
 .navbar-ul
@@ -28,6 +22,11 @@
     height: 60px;
 }
 
+.navbar-title
+{
+    align-content: center;
+}
+
 .nav-item:hover
 {
     background: #428d38;
@@ -36,37 +35,32 @@
     border-left: black 1px solid;
     //border-top: rgba(147,68,16,0.83) 5px solid;
     border-top: #2a5c24 5px solid;
-    padding-top: auto;
-    cursor: pointer;
+    padding-top: inherit;
     -webkit-transition: background-color 2s ease-in;
     -moz-transition: background-color 2s ease-out;
     -o-transition: background-color 2s ease-out;
-    transition: background-color 2s ease-out;
+    transition: ease-in-out all .4s;
 }
 
 .nav-item
 {
-    padding-left: 20px;
-    padding-right: 20px;
     height: 100%;
     margin-bottom: 5px;
 }
 
 .nav-item:first-child
 {
-    float: left;
     margin-right: auto;
     margin-bottom: 5px;
-    border-bottom: none;
-    spadding-left: 5px;
-    spadding-right: 5px;
 }
 
 .home-logo
 {
     justify-content: center;
     height: 100%;
-    width: 60px;
+    width: 70px;
+    margin-right: 60px;
+    margin-left: 60px;
 }
 
 main
@@ -86,7 +80,7 @@ main
 {
     display: inline-block;
     width: 48%;
-
+    position: static;
     <!-- 100% - width%*2 = 2% padd + 2% marg -->
 
     height: auto;
@@ -121,28 +115,20 @@ main
 {
     background: black;
     opacity: 0.5;
-    cursor: pointer;
-    -webkit-transition: background-color 1s ease-out;
-    -moz-transition: background-color 1s ease-out;
-    -o-transition: background-color 1s ease-out;
-    transition: background-color 0.5s ease-out;
+    transition: ease-in-out all .4s;
 }
 
 .female:hover
 {
     background: black;
     opacity: 0.5;
-    cursor: pointer;
-    -webkit-transition: background-color 1s ease-out;
-    -moz-transition: background-color 1s ease-out;
-    -o-transition: background-color 1s ease-out;
-    transition: background-color 0.5s ease-out;
+    transition: ease-in-out all .4s;
 }
 
 body
 {
     //background: linear-gradient(302deg, rgba(184,105,41,1) 20%, rgba(43,39,45,0.8813725319229254) 68%, rgba(206,190,214,0.8813725319229254) 87%);
-    background: linear-gradient(58deg, #428d38 20%, rgba(43,39,45,0.8813725319229254) 68%, rgba(206,190,214,0.8813725319229254) 87%);;
+    background: linear-gradient(58deg, #428d38 20%, rgba(43,39,45,0.8813725319229254) 68%, rgba(206,190,214,0.8813725319229254) 87%);
     height: auto;
     width: 100%;
     margin: auto;
@@ -175,7 +161,7 @@ body::-webkit-scrollbar-thumb
     border-radius: 5px;
 }
 
-header
+footer
 {
     background: black;
     margin-top: 10px;
@@ -185,25 +171,30 @@ header
     color: #4c4a4e;
 }
 
-header b
+footer b
 {
     font-size: 40px;
 }
 
-header .breakLine
+footer .copyright
+{
+    text-align: center;
+}
+
+footer .copyright:hover
+{
+    text-align: center;
+    color: white;
+}
+
+footer .breakLine
 {
     display: inline-block;
     width: 100%;
     border-bottom: #282729 1px solid;
 }
 
-header .specialThanks
-{
-    font-family: "Lucida Console", Monaco, monospace;
-    font-size: 10px;
-}
-
-header .boxes
+footer .boxes
 {
     display: flex;
     flex-direction: row;
@@ -211,20 +202,78 @@ header .boxes
     font-family: "Fira Code", serif;
 }
 
-.boxes .contactUs
+.boxes .usefulLinks
 {
-    margin-left: 4%;
-    width: 46%;
+    margin-left: 3%;
+    width: 47%;
+    text-align: left;
+}
+
+.usefulLinks span, .aboutUs span
+{
+    color: white;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.boxes .page
+{
+    color: #428d38;
+    text-decoration: none;
+}
+
+.page:hover
+{
+    border: 1px white solid;
+    font-size: 20px;
+    transition: ease-in-out all .2s;
 }
 
 .boxes .aboutUs
 {
-    margin-right: 4%;
-    width: 46%;
-    text-align: center;
+    width: 35%;
+    margin-left: 15%;
+}
+
+.boxes .mailto
+{
+    color: #4c4a4e;
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+.aboutUs img
+{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.mailto:hover
+{
+    font-size: 25px;
+    transition: ease-in-out all .2s;
+    border-bottom-right-radius: 10px;
+}
+
+.boxes ul
+{
+    //list-style-image: url('icons/website.png');
+}
+
+.boxes ul li
+{
+    font-size: 13px;
+    padding-top: 10px;
 }
 
 .clr
 {
     clear: both;
+}
+
+.nav-item a, .grid a
+{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
