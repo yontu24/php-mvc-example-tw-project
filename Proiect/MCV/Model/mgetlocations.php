@@ -16,12 +16,9 @@ $num = $stmt->rowCount();
 if($num>0){
     $contacts_arr=array("locations" => $num. " Locations.");
     $contacts_arr["values"]=array();
-    //$contacts_arr = array("values" => array());
-    //$contacts_arr=array();
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-        $contact = array("Locationdesc" => $row['Locationdesc']); 
-        //array_push($contacts_arr, $contact);
+        $contact = array("Locationdesc" => $row['Locationdesc']);
         array_push($contacts_arr["values"], $contact);
     }
     http_response_code(200);
