@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<script>
+const url = 'http://localhost/Proiect_1/MCV/Model/mgetbylocation.php';
+const xhr = new XMLHttpRequest();
+
+// listen for `load` event
+xhr.onload = () => {
+	var normalWtotal=0;
+	var obesetotal=0;
+	var overWtotal=0;
+	var underWtotal=0;
+	
+	var normalW2011=0,normalW2012=0,normalW2013=0,normalW2014=0,normalW2015=0,normalW2016=0,normalW2017=0,normalW2018=0;
+	var obese=[];
+	var overW=[];
+	var underW=[];
+	var anul=0;
+	var ob=0;
+    // print JSON response
+	var dataPoints1 =[];
+	var dataPoints2=[];
+    if (xhr.status >= 200 && xhr.status < 300) {
+        // parse JSON
+        const response = JSON.parse(xhr.responseText);
+		for (var i = 0; i < response.values.length; i++)
+		{
+		if (parseInt(response.values[i].an, 10) != anul) {
+			obese.push({
+				an: anul,
+				cazuri: ob
+			});
+			anul = (parseInt(response.values[i].an, 10));
+			ob = 0;
+		}
+
+		if (response.values[i].categorie.includes("Obese"))
+	
+			ob = ob + (parseInt(response.values[i].cazuri, 10));
+	
+		}
+		obese.shift();
+		for(var i=0;i<obese.length;i++)
+		{
+			dataPoints2.push({ y:obese[i].cazuri ,label :obese[i].an});
+		}
+		};
+		var chart2 = new CanvasJS.Chart("chartContainer2", {
+	animationEnabled: true,
+	theme: "light2",
+	title: {
+		text: "Cazuri in Puerto Rico 2011-2018"
+	},
+	
+	data: [{
+		type: "line",
+		visible: false,
+		//yValueFormatString: "#,### cazuri",
+		dataPoints: dataPoints2
+	}]
+});
+	
+	//chart1.render();
+	chart2.render();
+}
+const json = {
+    "locatie": "Puerto Rico"
+};
+
+// open request
+xhr.open('POST', url);
+
+// set `Content-Type` header
+xhr.setRequestHeader('Content-Type', 'application/json');
+
+// send rquest with JSON payload
+xhr.send(JSON.stringify(json));
+</script>
+<body>
+<select id="locality-dropdown" name="locality"></select>
+  	<script src="../Controller/getbylocation.js"></script>
+	<div id="chartContainer2" style="height: 100%; width: 100%;"></div>
+	<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</body>
+</html>
