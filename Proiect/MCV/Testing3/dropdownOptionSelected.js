@@ -1,36 +1,16 @@
+//let theDropdown = document.getElementById("locality-dropdown");
+import {functie1} from "./functie1.js";
+import {drawChart}from "./functie2.js";
+let a=functie1();
+let b=drawChart(a);
 let theDropdown = document.getElementById("locality-dropdown");
-
- function getSelectedValue() {
+theDropdown.onclick=
+function () {
     for (var i = 1; i < theDropdown.options.length; i++) {
         if (theDropdown.options[i].selected == true) {
-			drawChart();
+			b.render();
         }
     }
  }
 
 
- function drawChart() {
-    var chart2 = new CanvasJS.Chart("chartContainer2", {
-	animationEnabled: true,
-	theme: "light2",
-	title: {
-		text: "Cazuri in Puerto Rico 2011-2018"
-	},
-	
-	data: [{
-		type: "line",
-		
-		//yValueFormatString: "#,### cazuri",
-		dataPoints: [
-		{y:3},
-		{y:4},
-		{y:5},
-		{y:6},
-		{y:7}
-		]
-	}]
-});
-	
-	//chart1.render();
-	chart2.render();
-}

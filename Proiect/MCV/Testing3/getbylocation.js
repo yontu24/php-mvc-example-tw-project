@@ -89,6 +89,7 @@ xhr.onload = () => {
 		dataPoints: dataPoints1
 	}]
 });*/
+export default ob;
 var chart2 = new CanvasJS.Chart("chartContainer2", {
 	animationEnabled: true,
 	theme: "light2",
