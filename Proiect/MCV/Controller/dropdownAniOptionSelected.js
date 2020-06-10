@@ -1,6 +1,6 @@
 import {functie1} from "./functie1.js";
-import {drawSecondChart}from "../View/valdoileachart.js"
-;
+import {drawSecondChart}from "../View/valdoileachart.js";
+import {drawThirdChart}from "../View/valtreileachart.js";
 let theDropdown2 = document.getElementById("dropdownAni");
 theDropdown2.onclick = function () {
     for (var i = 1; i < theDropdown2.options.length; i++) {
@@ -14,6 +14,7 @@ theDropdown2.onclick = function () {
                 function() {
 					var opt=localStorage.getItem("locatie");
                      drawSecondChart(opt,optiune);
+					 drawThirdChart(opt,optiune);
                   });
 				  
             console.log(theDropdown2.options[i].text);
