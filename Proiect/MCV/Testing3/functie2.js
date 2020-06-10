@@ -1,10 +1,10 @@
-function drawChart(info) {
-	
+function drawChart(info,locatie) {
+	console.log(locatie);
 	var chart2 = new CanvasJS.Chart("chartContainer2", {
 	animationEnabled: true,
 	theme: "light2",
 	title: {
-		text: "Cazuri in Puerto Rico 2011-2018"
+		text: "Cazuri in "+locatie+" 2011-2018"
 	},
 	
 	data: [{

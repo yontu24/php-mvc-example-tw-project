@@ -1,4 +1,4 @@
-function functie1(){
+function functie1(locatie){
 const url = 'http://localhost/Proiect_1/MCV/Model/mgetbylocation.php';
 const xhr = new XMLHttpRequest();
 var obese=[];
@@ -43,9 +43,10 @@ xhr.onload = () => {
 
 // create a JSON object
 const json = {
-    "locatie": "Puerto Rico"
+    "locatie": locatie
 };
-
+console.log(json);
+console.log(locatie);
 // open request
 xhr.open('POST', url);
 
