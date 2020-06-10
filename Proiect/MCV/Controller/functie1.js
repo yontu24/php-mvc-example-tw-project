@@ -11,27 +11,33 @@ function functie1(locatie){
 			const response = JSON.parse(xhr.responseText);
 			for (var i = 0; i < response.values.length; i++)
 			{
-			if (parseInt(response.values[i].an, 10) != anul) {
-				obese.push({
-					an: anul,
-					cazuri: ob
-				});
-				anul = (parseInt(response.values[i].an, 10));
-				ob = 0;
-			}
+				console.log("sunt la grafic si am anul " + response.values[i].an);
+				if (parseInt(response.values[i].an, 10) != anul) {
+					obese.push({
+						an: anul,
+						cazuri: ob
+					});
+					anul = (parseInt(response.values[i].an, 10));
+					ob = 0;
+				}
 
-			if (response.values[i].categorie.includes("Obese"))
-		
-				ob = ob + (parseInt(response.values[i].cazuri, 10));
-		
+				if (response.values[i].categorie.includes("Obese"))
+			
+					ob = ob + (parseInt(response.values[i].cazuri, 10));
+			
 			}
+			console.log("sunt la obezi si am  " + ob);
 			obese.shift();
+			obese.push({
+				an: anul,
+				cazuri: ob
+			});
 			for(var i=0;i<obese.length;i++)
 			{
 				dataPoints2.push({ y:obese[i].cazuri ,label :obese[i].an});
 			}
 			
-		};
+		}
 	}
 
 	const json = {
@@ -45,7 +51,6 @@ function functie1(locatie){
 	xhr.setRequestHeader('Content-Type', 'application/json');
 
 	xhr.send(JSON.stringify(json));
-	
 	return dataPoints2;
 
 }
