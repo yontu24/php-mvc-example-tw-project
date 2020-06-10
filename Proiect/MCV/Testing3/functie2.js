@@ -38,4 +38,24 @@ function drawChart2(info,locatie,anul) {
 	return chart2;
 	//chart2.render();
 }
-export {drawChart,drawChart2};
+function drawChart3(info,locatie,anul) {
+	console.log(locatie);
+	var chart2 = new CanvasJS.Chart("chartContainer2", {
+	animationEnabled: true,
+	theme: "light2",
+	title: {
+		text: "Cazuri in "+locatie+" anul "+anul
+	},
+	
+	data: [{
+		type: "pie",
+		
+		//yValueFormatString: "#,### cazuri",
+		dataPoints: info
+	}]
+});
+	console.log(info);
+	return chart2;
+	//chart2.render();
+}
+export {drawChart,drawChart2,drawChart3};
