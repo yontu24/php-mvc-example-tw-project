@@ -19,7 +19,7 @@ function drawThirdChart(locatie,an) {
 	legend: { position: 'left' }
 	};
 
-	var chart = new google.visualization.BarChart(document.getElementById('curve_chart1'));
+	var chart = new google.visualization.BarChart(document.getElementById('bar_chart'));
 
 	chart.draw(data, options);
 }

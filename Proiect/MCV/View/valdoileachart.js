@@ -19,7 +19,7 @@ function drawSecondChart(locatie,an) {
 	legend: { position: 'left' }
 	};
 
-	var chart = new google.visualization.PieChart(document.getElementById('curve_chart'));
+	var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
 
 	chart.draw(data, options);
 }

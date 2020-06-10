@@ -1,4 +1,4 @@
-function functieda(locatie){
+function CDropdownAni(locatie){
 	let dropdownAni = document.getElementById('dropdownAni');
 	dropdownAni.length = 0;
 
@@ -8,7 +8,7 @@ function functieda(locatie){
 	dropdownAni.add(defaultOption1);
 	dropdownAni.selectedIndex = 0;
 
-	const url1 = 'http://localhost/Proiect_2/MCV/Model/mgetyears.php';
+	const url1 = 'http://localhost/TW/Proiect_TW/Model/mgetyears.php';
 
 	const request1 = new XMLHttpRequest();
 	request1.open('POST', url1);

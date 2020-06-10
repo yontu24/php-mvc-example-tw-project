@@ -1,5 +1,5 @@
 function CAlDoileaChart(locatie,an){
-	const url = 'http://localhost/Proiect_2/MCV/Model/mgetbylocation.php';
+	const url = 'http://localhost/TW/Proiect_TW/Model/mgetbylocation.php';
 	const xhr = new XMLHttpRequest();
 	var obese = [];
 	
