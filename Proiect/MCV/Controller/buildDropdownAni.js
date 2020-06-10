@@ -4,11 +4,11 @@ function functieda(locatie){
 
 	let defaultOption1 = document.createElement('option');
 	defaultOption1.text = 'Choose Year';
-
+	
 	dropdownAni.add(defaultOption1);
 	dropdownAni.selectedIndex = 0;
 
-	const url1 = 'http://localhost/TW/Proiect_TW/Model/mgetyears.php';
+	const url1 = 'http://localhost/Proiect_2/MCV/Model/mgetyears.php';
 
 	const request1 = new XMLHttpRequest();
 	request1.open('POST', url1);

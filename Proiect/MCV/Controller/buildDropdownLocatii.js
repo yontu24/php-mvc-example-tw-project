@@ -7,7 +7,7 @@ defaultOption2.text = 'Choose State/Province';
 dropdownLocatii.add(defaultOption2);
 dropdownLocatii.selectedIndex = 0;
 
-const url2 = 'http://localhost/TW/Proiect_TW/Model/mgetlocations.php';
+const url2 = 'http://localhost/Proiect_2/MCV/Model/mgetlocations.php';
 
 const request2 = new XMLHttpRequest();
 request2.open('GET', url2, true);

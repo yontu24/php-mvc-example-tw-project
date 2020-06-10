@@ -1,4 +1,5 @@
 import {drawFirstChart}from "../View/vprimulchart.js";
+import {drawSecondChart}from "../View/valdoileachart.js"
 
 let theDropdown1 = document.getElementById("dropdownLocatii");
 theDropdown1.onclick = function () {
@@ -10,7 +11,10 @@ theDropdown1.onclick = function () {
                 function() {
                      drawFirstChart(optiune);
                   });
-            caldoileagraf(theDropdown1.options[i].text);
+				localStorage.setItem("locatie", optiune);
+			
+			functieda(theDropdown1.options[i].text);
         }
     }
-}
+
+	}
