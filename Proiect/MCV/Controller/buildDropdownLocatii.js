@@ -2,10 +2,11 @@ let dropdownLocatii = document.getElementById('dropdownLocatii');
 dropdownLocatii.length = 0;
 
 let defaultOption2 = document.createElement('option');
-defaultOption2.text = 'Choose State/Province';
+defaultOption2.text = 'Choose location';
 
 dropdownLocatii.add(defaultOption2);
 dropdownLocatii.selectedIndex = 0;
+
 
 const url2 = 'http://localhost/TW/Proiect_TW/Model/mgetlocations.php';
 

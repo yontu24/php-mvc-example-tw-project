@@ -9,13 +9,13 @@ function drawFirstChart(locatie) {
 
 	for(var i=0 ; i < obese.length ; i++)
 	{
-		data.addRows([[obese[i].label , obese[i].y]
+		data.addRows([[obese[i].label , obese[i].y ]
 			]);
 	}
 
 	var options = {
-	title: 'Obesity by years',
-	legend: { position: 'left' }
+		title: 'Obesity by years',
+		legend: { position: 'bottom' }
 	};
 
 	var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));

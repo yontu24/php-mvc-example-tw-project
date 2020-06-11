@@ -20,8 +20,8 @@ theDropdown1.onclick = function () {
             document.getElementById("curve_chart").style.display = "block";
             document.getElementById("pie_chart").style.display = "none";
             document.getElementById("bar_chart").style.display = "none";
-
+            
         }
     }
 
-	}
+}
