@@ -16,6 +16,7 @@ function drawFirstChart(locatie) {
 	var options = {
 		title: 'Obesity by years',
 		legend: { position: 'bottom' }
+		// vAxis: {format: 'percent'}
 	};
 
 	var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
