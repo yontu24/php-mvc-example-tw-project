@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <title>TW Project DOC</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="View/icons/webicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="View/doc.css">
+</head>
+<body>
+<div class="container">
+    <div class="custom-button"><a href="index.html" title="Return to Home page">Home page</a></div>
+    <div class="title-container"><b>DOCUMENTATIE</b></div>
+    <ul class="content-list">
+        <li class="item"><a href="#abtr" title="Abstract">Abstract</a></li>
+        <li class="item"><a href="#mtv" title="Motivatie">Motivatie</a></li>
+        <li class="item"><a href="#arh" title="Arhitectura">Arehitectura</a></li>
+        <li class="remove-dot">
+            <ul>
+                <li class="item"><a href="#ctrl" title="Controller">Controller</a></li>
+                <li class="item"><a href="#mdl" title="Model">Model</a></li>
+                <li class="item"><a href="#view" title="View">View</a></li>
+                <li class="item"><a title="Baza de date">Baza de date</a></li>
+            </ul>
+        </li>
+        <li class="item"><a href="#str" title="Structura">Structura</a></li>
+        <li class="remove-dot">
+            <ul>
+                <li class="item"><a href="#str" title="Front-end">Front-end</a></li>
+                <li class="item"><a href="#str" title="Back-end">Back-end</a></li>
+                <li class="item"><a href="#str" title="Integrare">Integrare</a></li>
+            </ul>
+        </li>
+        <li class="item"><a href="#tw" title="Tehnologii folosite">Tehnologii folosite</a></li>
+        <li class="item"><a href="#mt" title="Metodologii">Metodologii</a></li>
+        <li class="remove-dot">
+            <ul>
+                <li class="item"><a title="GitHub">GitHub</a></li>
+                <li class="item"><a title="Kanban">Kanban</a></li>
+                <li class="item"><a title="Agile">Agile</a></li>
+            </ul>
+        </li>
+        <li class="item"><a href="#contact" title="Contact">Contact</a></li>
+        <li class="item"><a href="#bibl" title="Bibliografie">Bibliografie</a></li>
+    </ul>
+
+    <section id="abtr">
+        <div>
+            <h3 class="title-container">Abstract</h3>
+            <div>Numele proiectului Obis vine de la Obesity Prevalence Visualizer si se refera la
+                o platforma web pe care se pot vizualiza diferite statistici referitoare la
+                obezitatea pe ani, pe locatii si pe categorii de varsta a oamenilor din SUA.
+            </div>
+        </div>
+    </section>
+
+    <section id="mtv">
+        <div>
+            <h3 class="title-container">Motivatie</h3>
+            <div>O astfel de platforma ofera date care i-ar putea ajuta pe utilizatori sa isi faca
+                o imagine de ansamblu referitoare la diferite medii de viata si felul in care acestea
+                influenteaza greutatea persoanelor din cadrul lor.
+            </div>
+        </div>
+    </section>
+
+    <section id="arh">
+        <div>
+            <h3 class="title-container">Arhitectura</h3>
+            <div>Arhitectura aleasa este cea de tip MVC (Model-View-Controller) care presupune utilizarea
+                microserviciilor pentru a imparti functionalitatile proiectului.
+            </div>
+
+            <img src="View/icons/mvc.jpg" alt="">
+
+            <h2 id="ctrl">Controller</h2>
+            Controller-ele folosite sunt:
+            <ul>
+                <li>
+                    <div class="sub-list">buildDropdownAni</div>
+                    <div>Construiese dropdown-ul care contine anii ce pot fi alesi pentru desenarea chartului si il
+                        populeaza cu valori.
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">buildDropdownLocatii</div>
+                    <div>
+                        Construiese dropdown-ul care contine locatiile ce pot fi alese pentru desenarea chartului
+                        si il populeaza cu valori.
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">cdatabyyear</div>
+                    <div>
+                        Trimite o cerere de tip post la Model avand ca parametru locatia si contruieste tabelul
+                        reprezentand sursa de date pentru chartul care afiseaza procentajul de persoane obeze
+                        dintr-o locatie pe fiecare an.
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">cdatabylocation</div>
+                    <div>
+                        Trimite o cerere de tip post la Model avand ca parametru locatia si contruieste tabelul
+                        reprezentand sursa de date pentru chartul care afiseaza categoriile de varsta si numarul
+                        de persoane obeze dintr-o locatie intr-un an.
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">dropdownAniOptionSelected</div>
+                    <div>
+                        Deseneaza charturi avand drept criterii locatia selectata de la primul dropdown si anul
+                        selectat de la al doilea dropdown. Charturile sunt desenate folosind datele primite de la
+                        cdatabylocation.
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">dropdownLocatiiOptionSelected</div>
+                    <div>
+                        Deseneaza charturi avand drept criterii locatia selectata de la dropdownul curent.
+                        Charturile sunt desenate folosind datele primite de la cdataby.
+                    </div>
+                </li>
+            </ul>
+
+            <h2 id="mdl">Model</h2>
+            Modelele folosite sunt:
+            <ul>
+                <li>
+                    <div class="sub-list">mgetlocations</div>
+                    <div>
+                        pune la dispozitie toate locatiile in care s-au gasit cazuri de obezitate;
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">mgetbylocation</div>
+                    <div>
+                        pune la dispozitie anul, categoria de varsta, categoria de greutate si numarul
+                        de cazuri de obezitate gasite la locatia ceruta;
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">mgetyears</div>
+                    <div>
+                        pune la dispozitie anii in care au fost gasite cazuri de obezitate in locatia data;
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">MAsignup</div>
+                    <div>
+                        ofera din punct de vedere al administratorilor posibilitatea de a as e inregistra pentru
+                        viitoarele
+                        modificari
+                        aduse bazei de date;
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">MAlogin</div>
+                    <div>
+                        ofera din punct de vedere al administratorilor posibilitatea de a obtine token-ul de acces JWT
+                        folosit la
+                        viitoarele modificari aduse bazei de date;
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">MAreadinformation</div>
+                    <div>
+                        ofera din punct de vedere al administratorilor posibilitatea de a vizualiza valorile proprii
+                        adaugate bazei de date cu ajutorul token-ului JWT;
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">MAaddinformation</div>
+                    <div>
+                        ofera din punct de vedere al administratorilor posibilitatea de a adauga propriile valori
+                        bazei de date cu ajutorul token-ului JWT;
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">MAupdateinformations</div>
+                    <div>
+                        ofera din punct de vedere al administratorilor posibilitatea de a modifica valorile proprii
+                        din baza de date cu ajutorul token-ului JWT;
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">MAdeleteinformations</div>
+                    <div>
+                        ofera din punct de vedere al administratorilor posibilitatea de a sterge valorile proprii
+                        din baza de date cu ajutorul token-ului JWT;
+                    </div>
+                </li>
+            </ul>
+
+            <h2 id="view">View</h2>
+            View-urile folosite sunt:
+            <ul>
+                <li>
+                    <div class="sub-list">vprimulgraf</div>
+                    <div>
+                        Deseneaza graficul ce contine procentajul persoanelor obeze dintr-o locatie data in fiecare an.
+                        Graficul de tip line este desenat folosind datele primite de la cdatabyyear.
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">valdoileagraf</div>
+                    <div>
+                        Deseneaza chart-ul ce contine numarul de persoane obeze clasificate pe categorii de varsta
+                        dintr-o anumita locatie, intr-un anumit an. Graficul de tip pie este desenat
+                        folosind datele primite de la cdatabylocation.
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">valtreileagraf</div>
+                    <div>
+                        Deseneaza chart-ul ce contine numarul de persoane obeze clasificate pe categorii de varsta
+                        dintr-o anumita locatie, intr-un anumit an. Graficul de tip bar este desenat
+                        folosind datele primite de la cdatabylocation.
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">vchartcomparatie</div>
+                    <div>
+                        Deseneaza graficul ce contine o comparatie intre procentajul persoanelor obeze din doua
+                        locatii date raportata la anii 2011 si pana in prezent.
+                        Graful este de tip line si este desenat folosind date primite de la cdatabylocation (apelat
+                        de doua ori).
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="str">
+        <div>
+            <h3 class="title-container">Structura</h3>
+            <ul>
+                <li>
+                    <div class="sub-list">Front-end</div>
+                    <div>
+                        Partea de frontend a fost construita cu HTML5 si CSS3 pentru design-ul tag-urilor cat si pentru
+                        adaugarea de efecte/tranzitii animate.
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">Back-end</div>
+                    <div>
+                        Partea de backend a fost construita cu JQuery, Ajax si in mare parte JavaScript pentru a
+                        facilita afisarea dinamica de content, fara a da reload la pagina.
+                    </div>
+                    <div>
+                        Statisticile si vizualizarile generate pot fi exportate in formatele CSV, PNG si PDF.
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-list">Integrare:</div>
+                    <div>
+                        Integrarea este reprezentata de rezultatul corelarii functionalitatilor cu aspectul,
+                        precedata de sesiuni riguroase de testing.
+                    </div>
+                    <div>
+                        Paginile aplicatiei sunt: index.html, results.html si documentation.html.
+                        <ul>
+                            <li>
+                                <div class="sub-list">index.html - pagina principala</div>
+                                <div>
+                                    Ofera o scurta descriere despre obezitate si despre sistemul Behavioral Risk Factor
+                                    Surveillance System
+                                    ce colecteaza date despre evidenta bolilor cronice din U.S.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sub-list">result.html - a doua pagina</div>
+                                <div>
+                                    Pagina pune la dispozitia user-ului posibilitatea de a vizualiza statistici despre
+                                    obezitatea raportata
+                                    intr-o locatie pe durata anilor 2011 - prezent si obezitatea raportata intr-un an pe
+                                    categorii de varsta
+                                </div>
+                            </li>
+                            <li class="sub-list">documentatia.html - aceasta pagina</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="tw">
+        <div>
+            <h3 class="title-container">Tehnologii folosite</h3>
+            <ul>
+                <li class="sub-list"><a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a></li>
+                <li class="sub-list"><a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a></li>
+                <li class="sub-list"><a href="https://en.wikipedia.org/wiki/JavaScript">JAVASCRIPT</a></li>
+                <li class="sub-list"><a href="https://www.php.net/">PHP</a></li>
+                <li class="sub-list"><a href="https://jquery.com/">JQUERY</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="mt">
+        <div>
+            <h3 class="title-container">Metodologii folosite</h3>
+            <ul>
+                <li class="sub-list"><a href="https://github.com/">GitHub</a></li>
+                <li class="sub-list">Kanban</li>
+                <li class="sub-list">Agile</li>
+                <li>
+                    <div>
+                        Modelele de dezvoltare folosite in decursul implementarii codului au fost agile din punct de
+                        vedere
+                        al timpului si al task-urilor de realizat, dar si kanban pentru impartirea task-urilor si
+                        rezolvarea acestora prioritar.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div>
+            <h3 class="title-container">Contact</h3>
+            <ul>
+                <li class="sub-list">Ivascu Vlad-Alexandru</li>
+                <li class="remove-dot">
+                    <ul>
+                        <li class="sub-list"><a href="https://github.com/IvascuVlad">https://github.com/IvascuVlad</a>
+                        </li>
+                        <li class="sub-list"><a href="mailto:ivascu2vlad@gmail.com">ivascu2vlad@gmail.com</a></li>
+                    </ul>
+                </li>
+                <li class="sub-list">Craciun Ioan-Paul</li>
+                <li class="remove-dot">
+                    <ul>
+                        <li class="sub-list"><a href="https://github.com/yontu24">https://github.com/yontu24</a></li>
+                        <li class="sub-list"><a href="mailto:cip.ionut24@gmail.com">cip.ionut24@gmail.com</a></li>
+                    </ul>
+                </li>
+                <li class="sub-list">Aparaschivei Sebastian-Nicolae</li>
+                <li class="remove-dot">
+                    <ul>
+                        <li class="sub-list"><a
+                                href="https://github.com/SebastianAp27">https://github.com/SebastianAp27</a>
+                        </li>
+                        <li class="sub-list"><a href="mailto:sebastianap271@gmail.com">sebastianap271@gmail.com</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="bibl">
+        <div>
+            <h3 class="title-container">Bibliografie</h3>
+            <ul>
+                <li class="sub-list"><a href="https://www.youtube.com/playlist?list=PL11Bx-WW5OeNqZKqypsgZpqiQu_zymxn7">Poveşti
+                    cu şi despre Web (Cosmin Varlan)</a></li>
+                <li class="sub-list"><a href="https://profs.info.uaic.ro/~andrei.panu/">Web Technologies Dr. Andrei
+                    Panu</a></li>
+                <li class="sub-list"><a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/">Tehnologii Web Dr.
+                    Sabin-Corneliu Buraga</a></li>
+                <li class="sub-list"><a
+                        href="https://medium.com/datadriveninvestor/model-view-controller-mvc-75bcb0103d66">Model-View-Controller
+                    picture</a></li>
+                <li class="sub-list"><a
+                        href="https://www.geeksforgeeks.org/javascript-importing-and-exporting-modules/">Importing and
+                    exporting modules</a></li>
+                <li class="sub-list"><a href="https://developers.google.com/chart/interactive/docs/printing">Printing
+                    PNG Charts</a></li>
+                <li class="sub-list"><a
+                        href="https://stackoverflow.com/questions/18595651/saving-and-printing-a-google-chart">stackoverflow:
+                    Saving and printing a google chart</a></li>
+                <li class="sub-list"><a href="https://developers.google.com/chart">Google charts</a></li>
+                <li class="sub-list"><a href="https://www.iconfinder.com/">Icon finder: Pictures</a></li>
+                <li class="sub-list"><a href="https://validator.w3.org/">W3C Markup Validation Service</a></li>
+                <li class="sub-list"><a href="http://csslint.net//">CSS Lint</a></li>
+            </ul>
+        </div>
+    </section>
+</div>
+</body>
+</html>
