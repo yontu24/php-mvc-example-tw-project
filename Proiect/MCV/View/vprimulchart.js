@@ -1,4 +1,4 @@
-import {CPrimulChart} from "../Controller/cprimulchart.js";
+import {CPrimulChart} from "../Controller/cgetbyyears.js";
 
 function drawFirstChart(locatie) {
 	let obese = CPrimulChart(locatie);

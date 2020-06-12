@@ -1,4 +1,4 @@
-import {CAlDoileaChart} from "../Controller/caldoileachart.js";
+import {CAlDoileaChart} from "../Controller/cgetbylocations.js";
 	
 function drawThirdChart(locatie,an) {
 	let obese = CAlDoileaChart(locatie,an);

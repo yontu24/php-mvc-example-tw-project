@@ -32,6 +32,6 @@ if( !empty($data->username) && !empty($data->password) ){
 }
 else{
     http_response_code(400); // bad request
-    echo json_encode(array("message" => "Unable to create contact. Need more data."));
+    echo json_encode(array("message" => "Unable to create contact. Need more data"));
 }
 ?>

@@ -8,7 +8,7 @@ dropdownLocatii.add(defaultOption2);
 dropdownLocatii.selectedIndex = 0;
 
 
-const url2 = 'http://localhost/TW/Proiect_TW/Model/mgetlocations.php';
+const url2 = 'http://localhost/TW/proiecttw/Model/mgetlocations.php';
 
 const request2 = new XMLHttpRequest();
 request2.open('GET', url2, true);
@@ -22,6 +22,19 @@ request2.onload = function() {
 			option.text = data.values[i].Locationdesc;
 			dropdownLocatii.add(option);
 		}
+
+		document.getElementById("savecsv").style.display = "none";
+		document.getElementById("savecsv1").style.display = "none";
+		document.getElementById("savecsv2").style.display = "none";
+		document.getElementById("savecsv3").style.display = "none";
+		document.getElementById("savepdf").style.display = "none";
+		document.getElementById("savepdf1").style.display = "none";
+		document.getElementById("savepdf2").style.display = "none";
+		document.getElementById("savepdf3").style.display = "none";
+		document.getElementById("savepng").style.display = "none";
+		document.getElementById("savepng1").style.display = "none";
+		document.getElementById("savepng2").style.display = "none";
+		document.getElementById("savepng3").style.display = "none";
 	} else {
 		// Reached the server, but it returned an error
 	}   

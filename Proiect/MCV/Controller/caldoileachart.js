@@ -1,5 +1,5 @@
 function CAlDoileaChart(locatie,an){
-	const url = 'http://localhost/TW/proiecttw/Model/mgetbylocation.php';
+	const url = 'http://localhost/TW/proiecttw/Model/mgetbyyears.php';
 	const xhr = new XMLHttpRequest();
 	
 	var dataPoints2 = [];
@@ -10,17 +10,18 @@ function CAlDoileaChart(locatie,an){
 			console.log(response);
 			for (var i = 0; i < response.values.length; i++)
 			{
-				if (parseInt(response.values[i].an, 10) == an) {
+				// if (parseInt(response.values[i].an, 10) == an) {
 					dataPoints2.push({ 
-						y:parseInt(response.values[i].cazuri, 10) ,
-						label :response.values[i].IDcategorie
+						y:parseInt(response.values[i].cazuri, 10),
+						label :response.values[i].categorie
 					});
-				}
+				// }
 			}
 		}
 	}
 
 	const json = {
+		"an": an,
 		"locatie": locatie
 	};
 
@@ -29,7 +30,7 @@ function CAlDoileaChart(locatie,an){
 	xhr.setRequestHeader('Content-Type', 'application/json');
 
 	xhr.send(JSON.stringify(json));
-	
+
 	return dataPoints2;
 
 }

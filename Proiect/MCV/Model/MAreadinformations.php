@@ -52,7 +52,7 @@ if($num>0){
             "locatie" => $row['Locationdesc'],
             "categorie" => $row['Response'],
             "nr_cazuri" => $row['Sample_Size'],
-            "categorie_varsta" => $row['Break_Out_Category']
+            "categorie_varsta" => $row['BreakOutCategoryID']
         ); 
         array_push($contacts_arr["data"], $contact);
     }
@@ -62,7 +62,7 @@ if($num>0){
 else{
     http_response_code(404);
     echo json_encode(
-        array("message" => "No Data.")
+        array("message" => "No Data")
     );
 }
 ?>

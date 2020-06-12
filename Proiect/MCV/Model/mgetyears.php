@@ -14,10 +14,14 @@ $data = json_decode(file_get_contents("php://input"));
 
 if( !empty($data->locatie) )
 {
-    $query = "SELECT DISTINCT Year from informations where Locationdesc = :locatie  ORDER by Year ASC;";
+    $query = "SELECT DISTINCT Year from informations where Locationdesc = :locatie and `Response` = :raspuns and `Break_Out_Category` = :categorie  ORDER by Year ASC;";
     $stmt = $db->prepare($query);
 
-    $insert_array = ["locatie" => $data->locatie];
+    $insert_array = [
+        "locatie" => $data->locatie,
+        "raspuns" => 'Obese (BMI 30.0 - 99.8)',
+        "categorie" => 'Age Group'
+    ];
     $stmt->execute($insert_array);
 
     $num = $stmt->rowCount();

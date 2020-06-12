@@ -12,13 +12,18 @@ $db = $database->getConnection();
 
 $data = json_decode(file_get_contents("php://input"));
 
-if( !empty($data->locatie) )
+if( !empty($data->locatie) && !empty($data->an))
 {
-    $query = "SELECT distinct Year,Locationdesc,Response,Sample_Size,BreakoutID from informations where Locationdesc = :locatie and Break_Out_Category = :categorie_rezultate ORDER by Year,Locationdesc,BreakoutID;";
-    //$query = "SELECT distinct Year,Locationdesc,Response,Sample_Size,BreakoutID from informations where Locationdesc = 'Puerto Rico' and Break_Out_Category = 'Age Group' ORDER by Year,Locationdesc,BreakoutID;";
+    $query = "SELECT distinct Sample_Size,BreakoutID from informations where `Year` = :an and `Locationdesc` = :locatie and `Response` = :raspuns and `Break_Out_Category` = :categorie ORDER BY BreakoutID ASC;";
+    //$query = "SELECT distinct * FROM informations WHERE Locationdesc = :locatie and Break_Out_Category = :categorie and Response = :raspuns ORDER by BreakoutID , Year;";
     $stmt = $db->prepare($query);
 
-    $insert_array = ["locatie" => $data->locatie , "categorie_rezultate" => 'Age Group'];
+    $insert_array = [
+        "an" => $data->an,
+        "locatie" => $data->locatie , 
+        "raspuns" => 'Obese (BMI 30.0 - 99.8)',
+        "categorie" => 'Age Group'    
+    ];
     $stmt->execute($insert_array);
 
     $num = $stmt->rowCount();
@@ -29,11 +34,8 @@ if( !empty($data->locatie) )
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             $contact=array(
-                "an" => $row['Year'],
-                "locatie" => $row['Locationdesc'],
-                "categorie" => $row['Response'],
                 "cazuri" => $row['Sample_Size'],
-                "IDcategorie" => $row['BreakoutID']
+                "categorie" => $row['BreakoutID']
             ); 
             array_push($contacts_arr["values"], $contact);
         }
@@ -43,7 +45,7 @@ if( !empty($data->locatie) )
     else{
         http_response_code(404);
         echo json_encode(
-            array("message" => "No Data.")
+            array("message" => " No Data")
         );
     }
 }
