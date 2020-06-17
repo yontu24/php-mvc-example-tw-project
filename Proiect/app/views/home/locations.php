@@ -1,19 +1,21 @@
 <?php
-$location = $data;
+require_once "Optiuni.php";
 
-echo '<form action="Year" method="post">';
-for ($i = 0; $i < count($location); $i++):
-    echo '<input type="radio" name="' . $location[$i] . '" value="' . $location[$i] . '" /> ' . $location[$i] . '<br>';
-endfor;
+
+
+echo '<form action="#" method="post">';
+foreach($locations as $var):
+    echo '<input type="radio" name="' . $var . '" value="' . $var . '" /> ' . $var . '<br>';
+endforeach;
 echo '<input type="submit" name="action" value="Submit">';
 echo '</form>';
 
 
 
 
-for ($i = 0; $i < count($location); $i++):
-    if (isset($_POST[$location[$i]]))
-        echo 'Ai apasat pe ' . $_POST[$location[$i]];
-endfor;
+foreach($locations as $var):
+    if (isset($_POST[$var]))
+        echo 'Ai apasat pe ' . $_POST[$var];
+endforeach;
 
 ?>
