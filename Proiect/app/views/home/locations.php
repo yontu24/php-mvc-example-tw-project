@@ -3,9 +3,9 @@ require_once "Optiuni.php";
 
 
 
-echo '<form action="#" method="post">';
+echo '<form action="test" method="post">';
 foreach($locations as $var):
-    echo '<input type="radio" name="' . $var . '" value="' . $var . '" /> ' . $var . '<br>';
+    echo '<input type="checkbox" name="' . $var . '" value="' . $var . '" /> ' . $var . '<br>';
 endforeach;
 echo '<input type="submit" name="action" value="Submit">';
 echo '</form>';

@@ -19,10 +19,11 @@ class Chart {
         $jsonIterator = new RecursiveIteratorIterator(
                         new RecursiveArrayIterator(
                             json_decode($this->dataResponse, TRUE)), RecursiveIteratorIterator::SELF_FIRST);
-
         foreach ($jsonIterator as $key => $val) {
-            if(!is_array($val) && $key === "cazuri") {
+            if(!is_array($val) && $key ==='ani') {
+
                 array_push($this->date, $val);
+
             }
         }
 

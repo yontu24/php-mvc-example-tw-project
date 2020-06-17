@@ -41,4 +41,14 @@ class Home extends Controller {
       $this->view('home/chart', $year->_value);
 
     }
+    public function test(){
+      $date = $this->model('Location');
+      $date->_value = $date->getData();
+
+      // foreach ($loc->_value as $item) :
+      //     echo '<br>' . $item;
+      // endforeach;
+
+      $this->view('home/test', $date->_value);
+    }
 }
