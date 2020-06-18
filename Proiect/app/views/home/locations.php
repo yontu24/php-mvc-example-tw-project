@@ -26,21 +26,20 @@ foreach($years as $var):
 //---------------------------checkboxuri raspuns(categorii de greutate)
 
 foreach($response as $var):
+  $cuv=explode(" ",$var[0]);
     if($var[0]=='Obese (BMI 30.0 - 99.8)'){?>
-<input type="checkbox" name=<?=$var[0]?> value=<?=$var[1]?> checked > <?php echo $var[0]?> <br>
+<input type="checkbox" name=<?=$cuv[0]?> value=<?=$var[1]?> checked > <?php echo $var[0]?> <br>
 <?php } else {?>
-  <input type="checkbox" name=<?=$var[0]?> value=<?=$var[1]?> checked > <?php echo $var[0]?> <br>
+  <input type="checkbox" name=<?=$cuv[0]?> value=<?=$var[1]?>  > <?php echo $var[0]?> <br>
 <?php }endforeach;?>
 <br><br>
 
 <?php
 //---------------------------checkboxuri categorii (age group,overall,education etc)
 foreach($category as $var):
-    if($var=='Age Group'){?>
-<input type="radio" name="filterCategory" value=<?=$var?> checked > <?php echo $var?> <br>
-<?php } else {?>
-  <input type="radio" name="filterCategory" value=<?php echo str_replace(' ', '',$var)?> > <?php echo $var?> <br>
-<?php }endforeach;?>
+  ?>
+  <input type="radio" name="filterCategory" value=<?=$var[1]?> checked > <?php echo $var[0]?> <br>
+<?php endforeach;?>
 <br><br>
 <input type="submit" name="action" value="Submit">
 </form>
