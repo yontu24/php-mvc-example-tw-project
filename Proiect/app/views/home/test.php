@@ -1,4 +1,4 @@
-<?php $date=$data;
+<?php $date=$data3;
 
 ?>
 <html>
@@ -7,7 +7,7 @@
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
   <script type="text/javascript">
-
+ console.log(localStorage.getItem('location'));
   // Load the Visualization API and the piechart package.
   google.charts.load('current', {'packages':['corechart']});
   var response;
@@ -31,7 +31,7 @@
     ]);
   }
   var options = {
-          title: 'Obezitate '
+          title: 'Obezitate in '+localStorage.getItem('location')+' anul '+localStorage.getItem('year')
         };
   console.log(data);
   // Instantiate and draw our chart, passing in some options.
