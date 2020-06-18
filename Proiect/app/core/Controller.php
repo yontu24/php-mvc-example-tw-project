@@ -21,7 +21,7 @@ class Controller1 {
 
     // ceea ce parsam in functia asta va fi automat valabil
     // fisierul $view. In acest caz, $data va fi valabil in $view
-    public function view($view, $data1 = [],$data2=[],$data3=[]) {
+    public function view($view, $data1 = [],$data2=[],$data3=[],$data4=[],$data5=[]) {
         require_once '../app/views/' . $view . '.php';
     }
 }
