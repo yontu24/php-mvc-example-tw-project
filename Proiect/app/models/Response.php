@@ -4,6 +4,7 @@ class Response {
 
     public $dataResponse;
     public $response = array();
+    public $data = array();
     public function __construct() {
         $curl = curl_init();
 
@@ -16,19 +17,19 @@ class Response {
         $this->dataResponse = curl_exec($curl);
         curl_close($curl);
 
-        $jsonIterator = new RecursiveIteratorIterator(
-                        new RecursiveArrayIterator(
-                            json_decode($this->dataResponse, TRUE)), RecursiveIteratorIterator::SELF_FIRST);
 
-        foreach ($jsonIterator as $key => $val) {
-            if(!is_array($val) && $key === "raspuns") {
-                array_push($this->response, $val);
-            }
-        }
+                    $arr =json_decode($this->dataResponse,TRUE);
 
-    }
 
-    public function getData() {
-        return $this->response;
-    }
-}
+                    for($i=0;$i<count($arr['values']);$i++)
+                    {
+                      array_push($this->data,[$arr['values'][$i]['raspuns'],$arr['values'][$i]['id']]);}
+
+
+                    }
+
+                    public function getData() {
+
+                      return $this->data;
+                    }
+                  }
