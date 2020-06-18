@@ -16,25 +16,25 @@
             $this->conn = $db;
         }
 
-        public function read(){
+        public function read($an,$locatie,$id_raspuns,$id_categorie){
             $query = "";
-            if( isset($this->an)  && isset($this->locatie)  && isset($this->id_raspuns) && isset($this->id_categorie) )
+            if( isset($an)  && isset($locatie)  && isset($id_raspuns) && isset($id_categorie) )
             {
-                $query = "SELECT DISTINCT Break_Out, Sample_Size FROM informations where Year = '" . $this->an . "' and Locationdesc = '" . $this->locatie . "' and ResponseID = '" . $this->id_raspuns . "' and BreakOutCategoryID = '" . $this->id_categorie . "'  order by Break_Out ASC";
+                $query = "SELECT DISTINCT Break_Out, Sample_Size FROM informations where Year = '" . $an . "' and Locationdesc = '" . $locatie . "' and ResponseID = '" . $id_raspuns . "' and BreakOutCategoryID = '" . $id_categorie . "'  order by Break_Out ASC";
             }
-            else if( $this->an == 'true')
+            else if( $an == true)
             {
                 $query = "SELECT DISTINCT Year FROM informations order by Year ASC";
             } 
-            else if( $this->locatie == 'true')
+            else if( $locatie == true)
             {
                 $query = "SELECT DISTINCT Locationdesc FROM informations order by Locationdesc ASC";
             } 
-            else if( $this->id_raspuns == 'true')
+            else if( $id_raspuns == true)
             {
                 $query = "SELECT DISTINCT Response, ResponseID FROM informations order by ResponseID ASC";
             } 
-            else if( $this->id_categorie == 'true'){
+            else if( $id_categorie == true){
                 $query = "SELECT DISTINCT Break_Out_Category, BreakOutCategoryID FROM informations order by BreakOutCategoryID ASC";
             }
             //echo $query;
