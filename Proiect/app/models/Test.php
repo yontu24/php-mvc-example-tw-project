@@ -102,30 +102,37 @@ class Test {
 
                     //-------------------------------------------------------------------------------------curl pentru datele pe care o sa le transmit
 
-                    $paramLoc=[];
+                    $paramLoc='';
                     foreach($this->locations as $var):
                       if (isset($_POST[str_replace(' ', '',$var)]))
-                      array_push($paramLoc,str_replace(' ','_',$var));
-                      //echo getType($var);
-                      //echo $var;
-                      //echo $_POST[str_replace(' ', '',$var)];
+                      //array_push($paramLoc,str_replace(' ','_',$var));
+
+                      if($paramLoc==NULL)
+                      {$paramLoc.=str_replace(' ','_',$var);}
+                      else {$paramLoc.=','.str_replace(' ','_',$var);}
                     endforeach;
 
-                    $paramAn=[];
+                    $paramAn='';
                     foreach($this->years as $var):
                       if (isset($_POST[$var]))
                       //print_r($var);
                       //echo ($_POST[$var]);
-                      array_push($paramAn,$_POST[$var]);
+                      //array_push($paramAn,$_POST[$var]);
+                      if($paramAn==NULL)
+                      {$paramAn.=$_POST[$var];}
+                      else {$paramAn.=','.$_POST[$var];}
                     endforeach;
-
-                    $paramR=[];
+                    //echo $paramAn;
+                    $paramR='';$paramR1='';
                     foreach($this->response as $var):
                       $cuv=explode(" ",$var);
                       if (isset($_POST[$cuv[0]]))
-
-                      array_push($paramR,$_POST[$cuv[0]]);
+                      if($paramR==NULL)
+                      {$paramR.=$_POST[$cuv[0]];$paramR1.=$cuv[0];}
+                      else {$paramR.=','.$_POST[$cuv[0]];$paramR1.=$cuv[0];}
+                      //array_push($paramR,$_POST[$cuv[0]]);
                     endforeach;
+
                     $paramC;
                     if (isset($_POST['filterCategory']))
                     {
@@ -134,13 +141,14 @@ class Test {
                     //echo $paramC;
 
                     ?>
-                    <script type= text/javascript >localStorage.setItem('location','<?php echo str_replace('_',' ',$paramLoc[0])?>');
-                    localStorage.setItem('year','<?php echo $paramAn[0]?>')
+                    <script type= text/javascript >localStorage.setItem('location','<?php echo str_replace('_',' ',$paramLoc)?>');
+                    localStorage.setItem('year','<?php echo $paramAn?>');
+                    localStorage.setItem('response','<?php echo $paramR1?>');
                     </script>
                     <?php
                     $curl3 = curl_init();
 
-                    $url="http://localhost/Proiect_5/rest/api/info/read.php?an={$paramAn[0]}&locatie={$paramLoc[0]}&raspuns={$paramR[0]}&categorie={$paramC}";
+                    $url="http://localhost/Proiect_5/rest/api/info/read.php?an={$paramAn}&locatie={$paramLoc}&raspuns={$paramR}&categorie={$paramC}";
                     //"http://localhost/Proiect_5/rest/api/info/read.php?an=2018&locatie=Connecticut&raspuns=RESP040&categorie=CAT4"
 
                     curl_setopt_array($curl3, [

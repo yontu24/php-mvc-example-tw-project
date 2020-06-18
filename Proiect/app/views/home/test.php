@@ -31,7 +31,7 @@
     ]);
   }
   var options = {
-          title: 'Obezitate in '+localStorage.getItem('location')+' anul '+localStorage.getItem('year')
+          title: 'Number of cases of '+localStorage.getItem('response')+' people  in '+localStorage.getItem('location')+' ,year(s): '+localStorage.getItem('year')
         };
   console.log(data);
   // Instantiate and draw our chart, passing in some options.
