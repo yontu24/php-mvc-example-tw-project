@@ -7,7 +7,7 @@
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
   <script type="text/javascript">
- console.log(localStorage.getItem('location'));
+
   // Load the Visualization API and the piechart package.
   google.charts.load('current', {'packages':['corechart']});
   var response;
@@ -21,7 +21,7 @@
     console.log(obj[1][1][0]);
     console.log(obj.length);
     var data = new google.visualization.DataTable();
-    data.addColumn('string', 'categorie');
+    data.addColumn('string', 'label');
     data.addColumn('number', 'cazuri');
 
     for(var i=0 ; i < obj.length ; i++)
@@ -35,7 +35,14 @@
         };
   console.log(data);
   // Instantiate and draw our chart, passing in some options.
+  <?php if(isset($_POST['filterChart'])){
+  if($_POST['filterChart']=='piechart'){?>
   var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+  <?php } if($_POST['filterChart']=='barchart'){?>
+  var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+  <?php } if($_POST['filterChart']=='linechart'){?>
+  var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+  <?php }}?>
   chart.draw(data,options);
 }
 

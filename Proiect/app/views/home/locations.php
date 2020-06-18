@@ -35,11 +35,20 @@ foreach($response as $var):
 <br><br>
 
 <?php
-//---------------------------checkboxuri categorii (age group,overall,education etc)
+//---------------------------radio categorii (age group,overall,education etc)
 foreach($category as $var):
   ?>
   <input type="radio" name="filterCategory" value=<?=$var[1]?> checked > <?php echo $var[0]?> <br>
 <?php endforeach;?>
+<br><br>
+<?php
+//---------------------------radio categorii (age group,overall,education etc)
+
+  ?>
+  <input type="radio" name="filterChart" value='piechart' checked > PieChart <br>
+  <input type="radio" name="filterChart" value='linechart'  > LineChart <br>
+  <input type="radio" name="filterChart" value='barchart'  > BarChart <br>
+  
 <br><br>
 <input type="submit" name="action" value="Submit">
 </form>
