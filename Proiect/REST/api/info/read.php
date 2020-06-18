@@ -16,7 +16,7 @@ if(isset($_GET['an'])){
     $info->an = null;
 }
 if(isset($_GET['locatie'])){
-    $info->locatie = $_GET['locatie'];
+    $info->locatie = str_replace('_',' ',$_GET['locatie']);
 } else{
     $info->locatie = null;
 }
