@@ -60,7 +60,7 @@ body {
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    position: relative;
+    position: absolute;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -81,11 +81,11 @@ body {
 }
 
 .btn-1:hover {
-    background: #2980b9;
+    background: #5a6159;
 }
 
 .btn-1:active {
-    background: #2980b9;
+    background: #5a6159;
     top: 2px;
 }
 
@@ -96,10 +96,13 @@ body {
     top: 0;
     line-height: 3;
     font-size: 140%;
-    width: 60px;
+    width: 20%;
 }
 .icon-info:before {
-    content: "\f15b";
+
+    content: "";
+    background: url("image.png") no-repeat 0 0;
+    background-size: 85%;
 }
 /*container*/
 .container {
@@ -113,13 +116,21 @@ body {
 #chart_introduction{
   font:Lucida Bright;
   font-size: 40;
+  text-align: center;
 }
-#chart_div{
+/*#chart_div{
 
 
   height: 60%;
   length: 60%;
 
+}*/
+.chart {
+  width: 100%;
+  min-height: 450px;
+}
+.row {
+  margin:0 !important;
 }
 /*scrollbar*/
 body::-webkit-scrollbar {
