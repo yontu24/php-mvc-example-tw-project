@@ -111,7 +111,7 @@ class Test {
                       {$paramLoc.=str_replace(' ','_',$var);}
                       else {$paramLoc.=','.str_replace(' ','_',$var);}
                     endforeach;
-
+                    if($paramLoc==NULL){$paramLoc='Alabama';}
                     $paramAn='';
                     foreach($this->years as $var):
                       if (isset($_POST[$var]))
@@ -122,6 +122,7 @@ class Test {
                       {$paramAn.=$_POST[$var];}
                       else {$paramAn.=','.$_POST[$var];}
                     endforeach;
+                    if($paramAn==NULL){$paramAn='2011';}
                     //echo $paramAn;
                     $paramR='';$paramR1='';
                     foreach($this->response as $var):
@@ -132,12 +133,14 @@ class Test {
                       else {$paramR.=','.$_POST[$cuv[0]];$paramR1.=$cuv[0];}
                       //array_push($paramR,$_POST[$cuv[0]]);
                     endforeach;
-
+                    if($paramR==NULL){$paramR='RESP039';}
+                    if($paramR1==NULL){$paramR1='Obese';}
                     $paramC;
                     if (isset($_POST['filterCategory']))
                     {
                       $paramC=$_POST['filterCategory'];
                     }
+
                     //echo $paramC;
 
                     ?>

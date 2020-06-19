@@ -1,0 +1,179 @@
+html {
+    /*display: block;*/
+}
+
+body {
+    background: linear-gradient(58deg, #428d38 20%, rgba(43, 39, 45, 0.8813725319229254) 68%, rgba(206, 190, 214, 0.8813725319229254) 87%);
+    margin: 0;
+    padding: 0;
+    /*font-size: 12pt;
+    text-indent: 50px;*/
+    font-family: "Times New Roman", Times, serif;
+    background-size: cover;
+    text-align: justify;
+    letter-spacing: 2px;
+}
+/* butoane de export */
+.export_btns{
+  height: 10%;
+
+  display: inline;
+  width: 10%;
+
+
+}
+.btn {
+    border: none;
+    font-family: 'Lato';
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 80px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before {
+    font-family: 'FontAwesome';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* Icon separator */
+.btn-sep {
+    padding: 25px 60px 25px 120px;
+}
+
+.btn-sep:before {
+    background: rgba(0,0,0,0.15);
+}
+
+/* Button 1 */
+.btn-1 {
+    background: #428d38;
+    color: #2a2532;
+}
+
+.btn-1:hover {
+    background: #2980b9;
+}
+
+.btn-1:active {
+    background: #2980b9;
+    top: 2px;
+}
+
+.btn-1:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 140%;
+    width: 60px;
+}
+.icon-info:before {
+    content: "\f15b";
+}
+/*container*/
+.container {
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 6vw;
+    padding-top: 25px;
+}
+/* text pe care il scriu inainte de chart*/
+#chart_introduction{
+  font:Lucida Bright;
+  font-size: 40;
+}
+#chart_div{
+
+
+  height: 60%;
+  length: 60%;
+
+}
+/*scrollbar*/
+body::-webkit-scrollbar {
+    width: 9px;
+}
+
+body::-webkit-scrollbar-track {
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #2a5c24;
+    border-radius: 5px;
+}
+/*navbar*/
+.nav-bar {
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    transition: height 600ms ease;
+    position: fixed;
+    border: 0.5vw black solid;
+    background: #2a2532;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* navigation bar items */
+.nav-bar a {
+    height: 100%;
+    width: 4vw;
+    padding: 0;
+    margin-right: 1vw;
+    margin-left: 1vw;
+}
+
+.nav-bar a:hover {
+    height: 100%;
+    background: #428d38;
+    transition: ease-in-out all .4s;
+}
+
+.nav-bar a:first-child {
+    margin-right: auto;
+}
+/*iconite de pe bara*/
+.item-home {
+    content: url("../icons/home-logo.png");
+}
+
+.item-contact {
+    content: url("../icons/contact.png");
+}
+
+.item-lang {
+    content: url("../icons/lang.png");
+}
