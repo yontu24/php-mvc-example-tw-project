@@ -9,7 +9,7 @@ class Year {
 
         curl_setopt_array($curl, [
             CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_URL => 'http://localhost/Proiect_5/rest/api/info/read.php?an=true',
+            CURLOPT_URL => 'http://localhost/OBIS/REST/api/info/read.php?an=true',
             CURLOPT_USERAGENT => 'Codular Sample cURL Request'
         ]);
 

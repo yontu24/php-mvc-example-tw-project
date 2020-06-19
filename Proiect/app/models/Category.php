@@ -10,7 +10,7 @@ class Category {
 
     curl_setopt_array($curl, [
       CURLOPT_RETURNTRANSFER => 1,
-      CURLOPT_URL => 'http://localhost/Proiect_5/rest/api/info/read.php?categorie=true',
+      CURLOPT_URL => 'http://localhost/OBIS/REST/api/info/read.php?categorie=true',
       CURLOPT_USERAGENT => 'Codular Sample cURL Request'
     ]);
 
@@ -23,13 +23,12 @@ class Category {
 
     for($i=0;$i<count($arr['values']);$i++)
     {
-      array_push($this->data,[$arr['values'][$i]['categorii'],$arr['values'][$i]['id']]);}
-
-
-    }
-
-    public function getData() {
-      
-      return $this->data;
+      array_push($this->data,[$arr['values'][$i]['categorii'],$arr['values'][$i]['id']]);
     }
   }
+
+  public function getData() {
+    
+    return $this->data;
+  }
+}

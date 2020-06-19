@@ -12,12 +12,12 @@ $categories = $data4;
     <title>Comparison</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../../public/icons/webicon.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="http://localhost/obis/public/style/checkboxes_compare.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/OBIS/public/style/checkboxes_compare.css">
 </head>
 <body>
 <div class="container">
     <h1>STEP 1</h1>
-    <form action="../comparisons/stats" method="post">
+    <form action="comparisons/stats" method="post">
         <div class="checkbox checkbox_firstFilter">
             <h2>Choose first filter</h2>
             <ul class="checkboxList">

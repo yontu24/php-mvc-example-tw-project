@@ -35,7 +35,7 @@ class Comparison
         </script>
         <?php
 
-        $url = "http://localhost/obis/rest/api/info/read.php?an={$paramYear1}&locatie={$paramLoc1}&raspuns={$paramRes1}&categorie={$paramCat}";
+        $url = "http://localhost/OBIS/REST/api/info/read.php?an={$paramYear1}&locatie={$paramLoc1}&raspuns={$paramRes1}&categorie={$paramCat}";
         $curl = curl_init();
 
         curl_setopt_array($curl, [
@@ -60,7 +60,7 @@ class Comparison
         array_push($this->finalData, $this->data);
         $this->data = array();
 
-        $url = "http://localhost/obis/rest/api/info/read.php?an={$paramYear2}&locatie={$paramLoc2}&raspuns={$paramRes2}&categorie={$paramCat}";
+        $url = "http://localhost/OBIS/REST/api/info/read.php?an={$paramYear2}&locatie={$paramLoc2}&raspuns={$paramRes2}&categorie={$paramCat}";
         $curl = curl_init();
 
         curl_setopt_array($curl, [

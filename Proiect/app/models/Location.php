@@ -9,7 +9,7 @@ class Location {
 
         curl_setopt_array($curl, [
             CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_URL => 'http://localhost/Proiect_5/rest/api/info/read.php?locatie=true',
+            CURLOPT_URL => 'http://localhost/OBIS/REST/api/info/read.php?locatie=true',
             CURLOPT_USERAGENT => 'Codular Sample cURL Request'
         ]);
 
@@ -25,7 +25,6 @@ class Location {
                 array_push($this->locations, $val);
             }
         }
-
     }
 
     public function getData() {
