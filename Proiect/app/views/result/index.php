@@ -11,8 +11,8 @@ $categories = $data4;
 <head>
     <meta charset="UTF-8">
     <title>Results</title>
-    <link rel="stylesheet" type="text/css" href="http://localhost/obis/public/style/checkboxes.css">
-    <link rel="stylesheet" type="text/css" href="http://localhost/obis/public/style/index.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/Proiect_5/public/style/checkboxes.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/Proiect_5/public/style/index.css">
     <link rel="icon" href="../../../public/icons/webicon.png" type="image/x-icon">
 </head>
 <body>
@@ -25,7 +25,7 @@ $categories = $data4;
 </div>
 <div class="container">
     <h1>STEP 1</h1>
-    <form action="showchart" method="post">
+    <form action="results/showchart" method="post">
         <div class="checkbox">
             <ul class="checkboxList">
                 <li class="item">
@@ -76,6 +76,16 @@ $categories = $data4;
                                 <span class="checkmark"></span>
                             </label> <?php echo $category[0] ?> <br>
                         <?php endforeach; ?>
+                    </div>
+                </li>
+                <li class="item">
+                    <h1 class="filterTitle">Choose a chart type</h1>
+                    <div class="checkbox-container">
+
+                        <input type="radio" name="filterChart" value='piechart' checked > PieChart <br>
+                        <input type="radio" name="filterChart" value='linechart'  > LineChart <br>
+                        <input type="radio" name="filterChart" value='barchart'  > BarChart <br>
+                        
                     </div>
                 </li>
             </ul>
