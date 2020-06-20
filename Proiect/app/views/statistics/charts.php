@@ -95,33 +95,33 @@
         }
         window.addEventListener('resize', drawChart);
         </script>
-</head>
+      </head>
 
-    <body>
+      <body>
         <!--Div that will hold the pie chart-->
         <div class="nav-bar">
           <!--        DE ADAUGAT DOCUMENTATIA -->
-          <a class="item-home" href="index" title="Home">Press me</a>
-          <a class="item-contact" href="#contact" title="Contact us">Press me</a>
+          <a class="item-home" href="../../public/index.php" title="Home">Press me</a>
           <a class="item-lang" href="#" title="Documentation">Press me</a>
           <style>.nav-bar{position: unset;}</style>
         </div>
         <div class="container">
-        <div id="chart_introduction">
+          <button class="btn btn-1 btn-sep icon-back" onclick="window.location.href='../../public/results/index.php'" type="button">Draw another chart</button>
+          <div id="chart_introduction">
             <br>The results for the filters you applied are: <br><br>
 
-        </div>
-        <div class="row">
+          </div>
+          <div class="row">
 
 
-        <div id="chart_div" class="chart"></div>
+            <div id="chart_div" class="chart"></div>
 
-        </div>
-        <div class="export_btns">
+          </div>
+          <div class="export_btns">
             <button class="btn btn-1 btn-sep icon-info" id="savepdf" type="button">Export as PDF File</button>
             <button class="btn btn-1 btn-sep icon-info" id="savepng" type="button">Export as PNG File</button>
             <button class="btn btn-1 btn-sep icon-info" id="savecsv" type="button">Export as CSV File</button>
+          </div>
         </div>
-        </div>
-    </body>
-</html>
+      </body>
+      </html>

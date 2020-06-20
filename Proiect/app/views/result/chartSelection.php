@@ -18,7 +18,7 @@ $categories = $data4;
 <body>
 <div class="nav-bar">
     <!--        DE ADAUGAT DOCUMENTATIA -->
-    <a class="item-home" href="index" title="Home">Press me</a>
+    <a class="item-home" href="../../public/index.php" title="Home">Press me</a>
     <a class="item-contact" href="#contact" title="Contact us">Press me</a>
     <a class="item-lang" href="#" title="Documentation">Press me</a>
     <style>.nav-bar{position: unset;}</style>
@@ -67,7 +67,7 @@ $categories = $data4;
                     </div>
                 </li>
                 <li class="item">
-                    <h1 class="filterTitle">Choose weight category</h1>
+                    <h1 class="filterTitle">Choose a breakout category</h1>
                     <div class="checkbox-container">
                         <?php
                         foreach ($categories as $category):?>
@@ -85,7 +85,7 @@ $categories = $data4;
                         <input type="radio" name="filterChart" value='piechart' checked > PieChart <br>
                         <input type="radio" name="filterChart" value='linechart'  > LineChart <br>
                         <input type="radio" name="filterChart" value='barchart'  > BarChart <br>
-                        
+
                     </div>
                 </li>
             </ul>

@@ -1,3 +1,6 @@
+
+
+
 html {
     /*display: block;*/
 }
@@ -36,6 +39,7 @@ body {
     letter-spacing: 1px;
     font-weight: 700;
     outline: none;
+    border-radius: 12px;
     position: relative;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -102,6 +106,12 @@ body {
 
     content: "";
     background: url("image.png") no-repeat 0 0;
+    background-size: 85%;
+}
+.icon-back:before {
+
+    content: "";
+    background: url("back.png") no-repeat 0 0;
     background-size: 85%;
 }
 /*container*/

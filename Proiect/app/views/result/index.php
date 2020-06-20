@@ -10,7 +10,7 @@
 <body>
 <div class="nav-bar">
     <!--        DE ADAUGAT DOCUMENTATIA -->
-    <a class="item-home" href="index" title="Home">Press me</a>
+    <a class="item-home" href="../../public/index.php" title="Home">Press me</a>
     <a class="item-contact" href="#contact" title="Contact us">Press me</a>
     <a class="item-lang" href="#" title="Documentation">Press me</a>
     <style>.nav-bar{position: unset;}</style>
@@ -18,29 +18,13 @@
 <div class="container">
     <h1>STEP 1</h1>
     <form action="formularParametrii" method="post">
-        <div class="checkbox">
-            <label class="primul">
-                <input name="primul" type="radio" checked="checked">
-                Line Chart
-                <span class="checkmark"></span>
-            </label>
-            <label class="aldoilea">
-                <input name="primul" type="radio">
-                Pie Chart
-                <span class="checkmark"></span>
-            </label>
-            <label class="altreilea">
-                <input name="primul" type="radio">
-                Plot Chart
-                <span class="checkmark"></span>
-            </label>
-        </div>
+
         <div class="checkbox-container">
 
             <input type="radio" name="filterChart" value='piechart' checked > PieChart <br>
             <input type="radio" name="filterChart" value='linechart'  > LineChart <br>
             <input type="radio" name="filterChart" value='barchart'  > BarChart <br>
-                        
+
         </div>
         <input type="submit" name="action" value="Submit">
     </form>
