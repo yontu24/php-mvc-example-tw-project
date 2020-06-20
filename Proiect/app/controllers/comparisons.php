@@ -13,6 +13,15 @@ class Comparisons extends Controller
         $category = $this->model('Category');
         $category->value = $category->getData();
 
+        if(isset($_POST['filterChart']))
+        {
+        ?>
+            <script type=text/javascript>
+                localStorage.setItem('chartType', '<?php echo $_POST['filterChart'] ?>');
+            </script>
+        <?php
+        }
+
         $this->view('comparison/index', $loc->value, $year->value, $response->value, $category->value);
     }
 

@@ -59,19 +59,15 @@ $data = $data1;
             };
 
             // Instantiate and draw our chart, passing in some options.
-            <?php
-            if (isset($_POST['filterChart'])) { ?>
-            var representation = <?php echo $_POST['filterChart'];?>;
-            <?php
-            }
-            ?>
+            var representation = localStorage.getItem('chartType');
+            console.log(representation + " Bine ma");
 
             var chart;
-            if (representation === 1) {
+            if (representation === "1") {
                chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-            } else if (representation === 2) {
+            } else if (representation === "2") {
                 chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-            } else if (representation === 3) {
+            } else if (representation === "3") {
                 chart = new google.visualization.LineChart(document.getElementById('chart_div'));
             }
             chart.draw(data, options);

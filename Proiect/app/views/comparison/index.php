@@ -122,23 +122,6 @@ $categories = $data4;
                         <?php endforeach; ?>
                     </div>
                 </li>
-                <li class="item">
-                    <h1 class="filterTitle">Choose a chart representation</h1>
-                    <div class="checkbox-container">
-                        <label class="checkbox-label">
-                            <input type="radio" name="filterChart" value="1" checked>
-                            <span class="checkmark"></span>
-                        </label> Column Chart <br>
-                        <label class="checkbox-label">
-                            <input type="radio" name="filterChart" value="2">
-                            <span class="checkmark"></span>
-                        </label> Bar Chart <br>
-                        <label class="checkbox-label">
-                            <input type="radio" name="filterChart" value="3">
-                            <span class="checkmark"></span>
-                        </label> Line Chart <br>
-                    </div>
-                </li>
             </ul>
         </div>
         <input type="submit" name="action" value="Submit">

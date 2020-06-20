@@ -21,9 +21,9 @@
 
         <div class="checkbox-container">
 
-            <input type="radio" name="filterChart" value='plotchart' checked > PlotChart <br>
-            <input type="radio" name="filterChart" value='linechart'  > LineChart <br>
-            <input type="radio" name="filterChart" value='barchart'  > BarChart <br>
+            <input type="radio" name="filterChart" value="1" checked > ColumnChart <br>
+            <input type="radio" name="filterChart" value="2" > BarChart <br>
+            <input type="radio" name="filterChart" value="3"  > LineChart <br>
 
         </div>
         <input type="submit" name="action" value="Submit">

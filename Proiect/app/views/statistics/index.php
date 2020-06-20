@@ -78,16 +78,6 @@ $categories = $data4;
                         <?php endforeach; ?>
                     </div>
                 </li>
-                <li class="item">
-                    <h1 class="filterTitle">Choose a chart type</h1>
-                    <div class="checkbox-container">
-
-                        <input type="radio" name="filterChart" value='piechart' checked > PieChart <br>
-                        <input type="radio" name="filterChart" value='linechart'  > LineChart <br>
-                        <input type="radio" name="filterChart" value='barchart'  > BarChart <br>
-
-                    </div>
-                </li>
             </ul>
         </div>
         <input type="submit" name="action" value="Submit">
