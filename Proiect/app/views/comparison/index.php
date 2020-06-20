@@ -17,7 +17,7 @@ $categories = $data4;
 <body>
 <div class="container">
     <h1>STEP 1</h1>
-    <form action="comparisons/stats" method="post">
+    <form action="stats" method="post">
         <div class="checkbox checkbox_firstFilter">
             <h2>Choose first filter</h2>
             <ul class="checkboxList">

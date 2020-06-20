@@ -24,7 +24,7 @@ $categories = $data4;
     <style>.nav-bar{position: unset;}</style>
 </div>
 <div class="container">
-    <h1>STEP 1</h1>
+    <h1>STEP 3</h1>
     <form action="../statistics/index" method="post">
         <div class="checkbox">
             <ul class="checkboxList">

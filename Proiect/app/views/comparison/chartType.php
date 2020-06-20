@@ -16,18 +16,18 @@
     <style>.nav-bar{position: unset;}</style>
 </div>
 <div class="container">
-    <h1>STEP 1</h1>
-    <form action="formularTip" method="post">
+    <h1>STEP 2</h1>
+    <form action="../comparisons/index" method="post">
 
         <div class="checkbox-container">
 
-            <input type="radio" name="filterAction" value='comparison' checked > Comparison <br>
-            <input type="radio" name="filterAction" value='statistics'  > Statistics <br>
+            <input type="radio" name="filterChart" value='plotchart' checked > PlotChart <br>
+            <input type="radio" name="filterChart" value='linechart'  > LineChart <br>
+            <input type="radio" name="filterChart" value='barchart'  > BarChart <br>
 
         </div>
         <input type="submit" name="action" value="Submit">
     </form>
 </div>
-
 </body>
 </html>
