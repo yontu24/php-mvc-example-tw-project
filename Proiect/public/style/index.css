@@ -77,7 +77,9 @@ body::-webkit-scrollbar-thumb {
     margin-top: 6vw;
     padding-top: 25px;
 }
-
+.interactiveRequest{
+  display:inline;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .container {

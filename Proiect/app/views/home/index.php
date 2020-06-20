@@ -41,9 +41,12 @@
     </div>
     <div class="grid results">
 <!--        DE ADAUGAT AICI PAGINA CARE TE CONDUCE LA STEP 1 > ALEGE UN CHART-->
-        <a href="http://localhost/OBIS/public/results/index"><img src="../../../public/icons/stats.png" title="Show charts and results" alt=""></a>
+        <a href="http://localhost/OBIS/public/results/index"><img src="../public/icons/stats.png" title="Show charts and results" alt=""></a>
     </div>
     <div class="empty-pre"></div>
+      <?php require_once '../public/JavaScript/aplicatie.php'?>
+
+
 </div>
 <footer>
     <!--<div class="breakLine"></div><br><br>-->
