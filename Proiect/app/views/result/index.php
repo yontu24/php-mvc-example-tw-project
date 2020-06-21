@@ -16,17 +16,27 @@
     <style>.nav-bar{position: unset;}</style>
 </div>
 <div class="container">
-    <h1>STEP 1</h1>
+
+    <div class="stepText">
+      <img id="s1img" src="../../public/icons/firstStep.jpg">
+     <br><br>
+      Choose the type of data representation to be rendered.<br><br>
+      The statistics display sumed up data for the chosen filters.<br><br>
+      The comparisons display data for the two sets of chosen filters, in relation to eachother.<br><br>
+<br><br>
     <form action="formularTip" method="post">
 
-        <div class="checkbox-container">
 
-            <input type="radio" name="filterAction" value='comparison' checked > Comparison <br>
-            <input type="radio" name="filterAction" value='statistics'  > Statistics <br>
 
-        </div>
-        <input type="submit" name="action" value="Submit">
+        <div class="CorS">  <img src="../../public/icons/comparisons.png" class="checkImg">  <input type="radio" name="filterAction" value='comparison'  checked > Comparison <br></div>
+        <br><br>
+        <div class="CorS">  <img src="../../public/icons/statistics.png" class="checkImg">  <input type="radio" name="filterAction" value='statistics'  > Statistics <br></div>
+
+
+        <input type="submit" name="action" value="Submit" class="submit">
+
     </form>
+    </div>
 </div>
 
 </body>

@@ -11,7 +11,7 @@ $categories = $data4;
 <head>
     <meta charset="UTF-8">
     <title>Results</title>
-    <link rel="stylesheet" type="text/css" href="http://localhost/OBIS/public/style/checkboxes.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/OBIS/public/style/statistics.css">
     <link rel="stylesheet" type="text/css" href="http://localhost/OBIS/public/style/index.css">
     <link rel="icon" href="../../../public/icons/webicon.png" type="image/x-icon">
 </head>
@@ -24,7 +24,13 @@ $categories = $data4;
     <style>.nav-bar{position: unset;}</style>
 </div>
 <div class="container">
-    <h1>STEP 3</h1>
+
+    <div class="stepText">
+      <img id="s1img" src="../../public/icons/thirdStep.jpg">
+      <br><br>
+      Check the filters you want to apply to the data rendered on the chart from bellow.<br><br>
+      You can also choose multiple options from the same filter.<br><br>
+    </div>
     <form action="stats" method="post">
         <div class="checkbox">
             <ul class="checkboxList">
@@ -80,8 +86,18 @@ $categories = $data4;
                 </li>
             </ul>
         </div>
-        <input type="submit" name="action" value="Submit">
+        <input class="submit" type="submit" name="action" value="Submit">
+
     </form>
+
+    <br><br>
+    <div class="stepText">
+    Want to modify your choices?<br>
+
+    <form>
+<input type="button" class="submit" value="Return to previous step" onClick="javascript:history.go(-1)" />
+</form>
+</div>
 </div>
 </body>
 </html>

@@ -105,13 +105,13 @@ body {
 .icon-info:before {
 
     content: "";
-    background: url("image.png") no-repeat 0 0;
+    background: url("../icons/image.png") no-repeat 0 0;
     background-size: 85%;
 }
 .icon-back:before {
 
     content: "";
-    background: url("back.png") no-repeat 0 0;
+    background: url("../icons/back.png") no-repeat 0 0;
     background-size: 85%;
 }
 /*container*/

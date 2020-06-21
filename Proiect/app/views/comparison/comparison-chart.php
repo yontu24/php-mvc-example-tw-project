@@ -129,7 +129,7 @@ $data = $data1;
     <a class="item-lang" href="#" title="Documentation">Press me</a>
 </div>
 <div class="container">
-    <button class="btn btn-1 btn-sep icon-back" onclick="window.location.href='../../public/comparisons'" type="button">
+    <button class="btn btn-1 btn-sep icon-back" onclick="window.location.href='../../public/results/index'" type="button">
         Draw another chart
     </button>
     <div id="chart_introduction">
