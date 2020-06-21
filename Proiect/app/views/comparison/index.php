@@ -13,13 +13,20 @@ $categories = $data4;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../../public/icons/webicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="http://localhost/OBIS/public/style/checkboxes_compare.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/OBIS/public/style/index.css">
 </head>
+<div class="nav-bar">
+    <!--        DE ADAUGAT DOCUMENTATIA -->
+    <a class="item-home" href="../../public/index" title="Home">Press me</a>
+    <a class="item-lang" href="#" title="Documentation">Press me</a>
+    <style>.nav-bar{position: unset;}</style>
+</div>
 <body>
 <div class="container">
-    <h1>STEP 1</h1>
+    <h1>STEP 3</h1>
     <form action="stats" method="post">
         <div class="checkbox checkbox_firstFilter">
-            <h2>Choose first filter</h2>
+            <h2 class="container-title">Choose first filter</h2>
             <ul class="checkboxList">
                 <li class="item">
                     <h1 class="filterTitle">Choose a Location</h1>
@@ -64,7 +71,7 @@ $categories = $data4;
         </div>
 
         <div class="checkbox checkbox_secondFilter">
-            <h2>Choose first filter</h2>
+            <h2 class="container-title">Choose second filter</h2>
             <ul class="checkboxList">
                 <li class="item">
                     <h1 class="filterTitle">Choose a Location</h1>

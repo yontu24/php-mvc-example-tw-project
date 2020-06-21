@@ -58,7 +58,13 @@
     text-align: center;
 }
 
-
+.checkbox .container-title {
+    font-family: "Verdana", Times, serif;
+    content: url("AICI PUI IMAGINEA");
+    width: 20%;
+    margin-left: 40%;
+    text-align: center;
+}
 
 .checkbox-label {
     position: relative;
