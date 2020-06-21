@@ -1,31 +1,22 @@
 <?php
 
-class Response {
+class Response extends Model
+{
+    public $response = array();
+    public $data = array();
+    private static $url = 'http://localhost/OBIS/REST/api/info/read.php?raspuns=true';
 
-  public $dataResponse;
-  public $response = array();
-  public $data = array();
-  public function __construct() {
-    $curl = curl_init();
-
-    curl_setopt_array($curl, [
-    CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'http://localhost/OBIS/REST/api/info/read.php?raspuns=true',
-    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-    ]);
-
-    $this->dataResponse = curl_exec($curl);
-    curl_close($curl);
-
-    $arr =json_decode($this->dataResponse,TRUE);
-
-    for($i=0;$i<count($arr['values']);$i++)
+    public function __construct()
     {
-      array_push($this->data,[$arr['values'][$i]['raspuns'],$arr['values'][$i]['id']]);
-    }
-  }
+        $response = Model::getDataResponse(self::$url);
 
-  public function getData() {
-    return $this->data;
-  }
+        for ($i = 0; $i < count($response['values']); $i++) {
+            array_push($this->data, [$response['values'][$i]['raspuns'], $response['values'][$i]['id']]);
+        }
+    }
+
+    public function getData()
+    {
+        return $this->data;
+    }
 }

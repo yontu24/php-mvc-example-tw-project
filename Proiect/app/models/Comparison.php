@@ -1,6 +1,6 @@
 <?php
 
-class Comparison
+class Comparison extends Model
 {
     public $data = array();
     public $finalData = array();
@@ -10,23 +10,13 @@ class Comparison
         /////////////////////////////////////////////////////////////////
         ///////////////////////// GET LOCATIONS /////////////////////////
         /////////////////////////////////////////////////////////////////
-        $curl = curl_init();
 
-        curl_setopt_array($curl, [
-            CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_URL => 'http://localhost/OBIS/REST/api/info/read.php?locatie=true',
-            CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-        ]);
+        $url = 'http://localhost/OBIS/REST/api/info/read.php?locatie=true';
+        $dataResponse = Model::getDataResponse($url);
+        $locations = new RecursiveIteratorIterator(new RecursiveArrayIterator($dataResponse), RecursiveIteratorIterator::SELF_FIRST);
 
-        $dataResponse = curl_exec($curl);
-        curl_close($curl);
-
-        $locations = new RecursiveIteratorIterator(
-            new RecursiveArrayIterator(
-                json_decode($dataResponse, TRUE)), RecursiveIteratorIterator::SELF_FIRST);
-
-        $paramLoc1 = ''; // valoarea by default
-        $paramLoc2 = ''; // valoarea by default
+        $paramLoc1 = '';
+        $paramLoc2 = '';
 
         foreach ($locations as $key => $val):
             if (!is_array($val) && $key === "locatii") {
@@ -44,26 +34,16 @@ class Comparison
 
         if ($paramLoc1 === '')
             $paramLoc1 = 'Florida';
-        if ($paramLoc2=== '')
+        if ($paramLoc2 === '')
             $paramLoc2 = 'Nevada';
 
         /////////////////////////////////////////////////////////////////
         /////////////////////////// GET YEARS ///////////////////////////
         /////////////////////////////////////////////////////////////////
-        $curl = curl_init();
 
-        curl_setopt_array($curl, [
-            CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_URL => 'http://localhost/OBIS/REST/api/info/read.php?an=true',
-            CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-        ]);
-
-        $dataResponse = curl_exec($curl);
-        curl_close($curl);
-
-        $years = new RecursiveIteratorIterator(
-            new RecursiveArrayIterator(
-                json_decode($dataResponse, TRUE)), RecursiveIteratorIterator::SELF_FIRST);
+        $url = 'http://localhost/OBIS/REST/api/info/read.php?an=true';
+        $dataResponse = Model::getDataResponse($url);
+        $years = new RecursiveIteratorIterator(new RecursiveArrayIterator($dataResponse), RecursiveIteratorIterator::SELF_FIRST);
 
         $paramYear1 = '';
         $paramYear2 = '';
@@ -84,7 +64,7 @@ class Comparison
 
         if ($paramYear1 === '')
             $paramYear1 = '2017';
-        if ($paramYear2=== '')
+        if ($paramYear2 === '')
             $paramYear2 = '2017';
 
         $paramRes1 = isset($_POST['filterFirstResponse']) ? $_POST['filterFirstResponse'] : 'RESP040';
@@ -103,48 +83,30 @@ class Comparison
         </script>
         <?php
 
+        /////////////////////////////////////////////////////////////////
+        //////////////////// GET DATA BY USER CHOICES ///////////////////
+        /////////////////////////////////////////////////////////////////
+
         $url = "http://localhost/OBIS/REST/api/info/read.php?an={$paramYear1}&locatie={$paramLoc1}&raspuns={$paramRes1}&categorie={$paramCat}";
-        $curl = curl_init();
+        $dataResponse = Model::getDataResponse($url);
 
-        curl_setopt_array($curl, [
-            CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_URL => $url,
-            CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-        ]);
-
-        $dataResponse = curl_exec($curl);
-        curl_close($curl);
-
-        $arrdata = json_decode($dataResponse, TRUE);
-
-        for ($i = 0; $i < count($arrdata['values']); $i++) {
+        for ($i = 0; $i < count($dataResponse['values']); $i++) {
             array_push($this->data, [
-                $arrdata['values'][$i]['break_out'],
-                $arrdata['values'][$i]['cazuri']
+                $dataResponse['values'][$i]['break_out'],
+                $dataResponse['values'][$i]['cazuri']
             ]);
         }
 
         array_push($this->finalData, $this->data);
-        $this->data = array();
+        $this->data = array();  // BUG FIX
 
         $url = "http://localhost/OBIS/REST/api/info/read.php?an={$paramYear2}&locatie={$paramLoc2}&raspuns={$paramRes2}&categorie={$paramCat}";
-        $curl = curl_init();
+        $dataResponse = Model::getDataResponse($url);
 
-        curl_setopt_array($curl, [
-            CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_URL => $url,
-            CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-        ]);
-
-        $dataResponse = curl_exec($curl);
-        curl_close($curl);
-
-        $arrdata = json_decode($dataResponse, TRUE);
-
-        for ($i = 0; $i < count($arrdata['values']); $i++) {
+        for ($i = 0; $i < count($dataResponse['values']); $i++) {
             array_push($this->data, [
-                $arrdata['values'][$i]['break_out'],
-                $arrdata['values'][$i]['cazuri']
+                $dataResponse['values'][$i]['break_out'],
+                $dataResponse['values'][$i]['cazuri']
             ]);
         }
         array_push($this->finalData, $this->data);

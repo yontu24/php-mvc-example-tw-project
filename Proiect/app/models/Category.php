@@ -1,34 +1,21 @@
 <?php
 
-class Category {
+class Category extends Model
+{
+    public $data = array();
+    private static $url = 'http://localhost/OBIS/REST/api/info/read.php?categorie=true';
 
-  public $dataResponse;
-  public $category = array();
-  public $data = array();
-  public function __construct() {
-    $curl = curl_init();
-
-    curl_setopt_array($curl, [
-      CURLOPT_RETURNTRANSFER => 1,
-      CURLOPT_URL => 'http://localhost/OBIS/REST/api/info/read.php?categorie=true',
-      CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-    ]);
-
-    $this->dataResponse = curl_exec($curl);
-    curl_close($curl);
-
-
-    $arr =json_decode($this->dataResponse,TRUE);
-
-
-    for($i=0;$i<count($arr['values']);$i++)
+    public function __construct()
     {
-      array_push($this->data,[$arr['values'][$i]['categorii'],$arr['values'][$i]['id']]);
-    }
-  }
+        $response = Model::getDataResponse(self::$url);
 
-  public function getData() {
-    
-    return $this->data;
-  }
+        for ($i = 0; $i < count($response['values']); $i++) {
+            array_push($this->data, [$response['values'][$i]['categorii'], $response['values'][$i]['id']]);
+        }
+    }
+
+    public function getData()
+    {
+        return $this->data;
+    }
 }
