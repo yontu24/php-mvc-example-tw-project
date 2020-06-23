@@ -3,7 +3,7 @@
 class Category extends Model
 {
     public $data = array();
-    private static $url = 'http://localhost/OBIS/REST/api/info/read.php?categorie=true';
+    private static $url = 'http://localhost/OBIS/REST/api/info/categorii/read.php';
 
     public function __construct()
     {

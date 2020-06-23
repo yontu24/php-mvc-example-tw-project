@@ -46,11 +46,11 @@ if (!empty($data->an) && !empty($data->locatie)  && !empty($data->break_out) && 
     $info->id_raspuns = $data->id_raspuns;
 
     if($info->create()){ 
-        http_response_code(201); //201 resource created
-        echo json_encode(array("message" => "Information added."));
+        http_response_code(201);
+        echo json_encode(array("message" => "Information added"));
     }
     else{
-        http_response_code(503); // 503 service u
+        http_response_code(503);
         echo json_encode(array("message" => "Unable to add information"));
     }
 }else{

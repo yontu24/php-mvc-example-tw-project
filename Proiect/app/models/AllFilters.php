@@ -11,7 +11,7 @@ class AllFilters extends Model
     public function __construct()
     {
         //----------------------------------------------------------------------curl pentru locatii
-        $url = 'http://localhost/OBIS/REST/api/info/read.php?locatie=true';
+        $url = 'http://localhost/OBIS/REST/api/info/locatii/read.php';
         $dataResponse = Model::getDataResponse($url);
 
         $jsonIterator = new RecursiveIteratorIterator(
@@ -23,7 +23,7 @@ class AllFilters extends Model
             }
         }
         //-------------------------------------------------------------------------------------curl pentru ani
-        $url = 'http://localhost/OBIS/REST/api/info/read.php?an=true';
+        $url = 'http://localhost/OBIS/REST/api/info/ani/read.php';
         $dataResponse = Model::getDataResponse($url);
 
         $jsonIterator = new RecursiveIteratorIterator(
@@ -35,7 +35,7 @@ class AllFilters extends Model
             }
         }
         //-------------------------------------------------curl pentru raspuns(categorii de greutate)
-        $url = 'http://localhost/OBIS/REST/api/info/read.php?raspuns=true';
+        $url = 'http://localhost/OBIS/REST/api/info/raspunsuri/read.php';
         $dataResponse = Model::getDataResponse($url);
 
         $jsonIterator = new RecursiveIteratorIterator(
@@ -47,7 +47,7 @@ class AllFilters extends Model
             }
         }
         //----------------------------------------------------------------curl pentru categorii(educatie,gender,etc)
-        $url = 'http://localhost/OBIS/REST/api/info/read.php?categorie=true';
+        $url = 'http://localhost/OBIS/REST/api/info/categorii/read.php';
         $dataResponse = Model::getDataResponse($url);
 
         $jsonIterator = new RecursiveIteratorIterator(

@@ -22,21 +22,6 @@
             {
                 $query = "SELECT DISTINCT Break_Out, Sample_Size FROM informations where Year = '" . $an . "' and Locationdesc = '" . $locatie . "' and ResponseID = '" . $id_raspuns . "' and BreakOutCategoryID = '" . $id_categorie . "'  order by Break_Out ASC";
             }
-            else if( $an == true)
-            {
-                $query = "SELECT DISTINCT Year FROM informations order by Year ASC";
-            } 
-            else if( $locatie == true)
-            {
-                $query = "SELECT DISTINCT Locationdesc FROM informations order by Locationdesc ASC";
-            } 
-            else if( $id_raspuns == true)
-            {
-                $query = "SELECT DISTINCT Response, ResponseID FROM informations order by ResponseID ASC";
-            } 
-            else if( $id_categorie == true){
-                $query = "SELECT DISTINCT Break_Out_Category, BreakOutCategoryID FROM informations order by BreakOutCategoryID ASC";
-            }
             //echo $query;
 
             $stmt = $this->conn->prepare($query);

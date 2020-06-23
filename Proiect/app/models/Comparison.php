@@ -11,7 +11,7 @@ class Comparison extends Model
         ///////////////////////// GET LOCATIONS /////////////////////////
         /////////////////////////////////////////////////////////////////
 
-        $url = 'http://localhost/OBIS/REST/api/info/read.php?locatie=true';
+        $url = 'http://localhost/OBIS/REST/api/info/locatii/read.php';
         $dataResponse = Model::getDataResponse($url);
         $locations = new RecursiveIteratorIterator(new RecursiveArrayIterator($dataResponse), RecursiveIteratorIterator::SELF_FIRST);
 
@@ -41,7 +41,7 @@ class Comparison extends Model
         /////////////////////////// GET YEARS ///////////////////////////
         /////////////////////////////////////////////////////////////////
 
-        $url = 'http://localhost/OBIS/REST/api/info/read.php?an=true';
+        $url = 'http://localhost/OBIS/REST/api/info/ani/read.php';
         $dataResponse = Model::getDataResponse($url);
         $years = new RecursiveIteratorIterator(new RecursiveArrayIterator($dataResponse), RecursiveIteratorIterator::SELF_FIRST);
 

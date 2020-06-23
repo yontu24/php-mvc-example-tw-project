@@ -3,7 +3,7 @@
 class Location extends Model
 {
     public $locations = array();
-    private static $url = 'http://localhost/OBIS/REST/api/info/read.php?locatie=true';
+    private static $url = 'http://localhost/OBIS/REST/api/info/locatii/read.php';
 
     public function __construct()
     {

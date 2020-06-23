@@ -3,7 +3,7 @@
 class Year extends Model
 {
     public $years = array();
-    private static $url = 'http://localhost/OBIS/REST/api/info/read.php?an=true';
+    private static $url = 'http://localhost/OBIS/REST/api/info/ani/read.php';
 
     public function __construct()
     {

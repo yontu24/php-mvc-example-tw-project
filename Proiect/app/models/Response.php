@@ -4,7 +4,7 @@ class Response extends Model
 {
     public $response = array();
     public $data = array();
-    private static $url = 'http://localhost/OBIS/REST/api/info/read.php?raspuns=true';
+    private static $url = 'http://localhost/OBIS/REST/api/info/raspunsuri/read.php';
 
     public function __construct()
     {
