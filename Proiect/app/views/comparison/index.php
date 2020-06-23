@@ -16,17 +16,21 @@ $categories = $data4;
     <link rel="stylesheet" type="text/css" href="http://localhost/OBIS/public/style/index.css">
 </head>
 <div class="nav-bar">
-    <!--        DE ADAUGAT DOCUMENTATIA -->
-    <a class="item-home" href="../../public/index" title="Home">Press me</a>
+    <a class="item-home" href="../../public/home/index/" title="Home">Press me</a>
     <a class="item-lang" href="#" title="Documentation">Press me</a>
     <style>.nav-bar{position: unset;}</style>
 </div>
 <body>
 <div class="container">
-    <h1>STEP 3</h1>
+    <div class="stepText">
+        <img id="s1img" src="../../public/icons/thirdStep.jpg" alt="">
+        <br><br>
+        Check the filters you want to apply to the data rendered on the chart from bellow.<br><br>
+        You can also choose multiple options from the same filter.<br><br>
+    </div>
     <form action="stats" method="post">
         <div class="checkbox checkbox_firstFilter">
-            <h2 class="container-title">Choose first filter</h2>
+            <h2 class="container-title1">Choose first filter</h2>
             <ul class="checkboxList">
                 <li class="item">
                     <h1 class="filterTitle">Choose a Location</h1>
@@ -71,7 +75,7 @@ $categories = $data4;
         </div>
 
         <div class="checkbox checkbox_secondFilter">
-            <h2 class="container-title">Choose second filter</h2>
+            <h2 class="container-title2">Choose second filter</h2>
             <ul class="checkboxList">
                 <li class="item">
                     <h1 class="filterTitle">Choose a Location</h1>
@@ -131,7 +135,12 @@ $categories = $data4;
                 </li>
             </ul>
         </div>
-        <input type="submit" name="action" value="Submit">
+        <input type="submit" name="action" class="submit" value="Submit">
+        <br><br>
+        <div class="stepText"><br>Want to modify your choices?<br></div>
+        <form>
+            <input type="button" class="submit" value="Return to previous step" onClick="history.go(-1)"/>
+        </form>
     </form>
 </div>
 </body>

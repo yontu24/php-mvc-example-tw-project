@@ -8,19 +8,21 @@
 
 .checkbox-container::-webkit-scrollbar-track {
     background: #4c4a4e;
+    border-radius: 5px;
 }
 
 .checkbox-container::-webkit-scrollbar-thumb {
-    background: #428d38;
+    background: #1a8b34;
     border-radius: 5px;
 }
 
 .checkbox-container {
-    background: rgb(206, 190, 214);
+    background: #6bc29b;
+    color: #2f3030;
     max-height: 200px;
     max-width: 100%;
     overflow: auto;
-    color: #4c4a4e;
+    border-radius: 12px;
 }
 
 .checkbox {
@@ -30,7 +32,7 @@
 }
 
 .checkbox_firstFilter {
-
+    margin-top: 80px;
 }
 
 .checkbox_secondFilter {
@@ -38,6 +40,7 @@
 }
 
 .checkboxList {
+    display: inline-block;
     list-style-type: none;
     padding: 0;
     margin-left: 10%;
@@ -51,18 +54,31 @@
 }
 
 .item {
-    border: 1px #428d38 solid;
+    border-radius: 12px;
 }
 
 .filterTitle {
     text-align: center;
+    color: #2f3030;
+    background: #1a8b34;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 0;
 }
 
-.checkbox .container-title {
+.checkbox .container-title1 {
     font-family: "Verdana", Times, serif;
-    content: url("../icons/thirdStep.jpg");
-    width: 20%;
-    margin-left: 40%;
+    content: url("../icons/firstSetOfFilters.jpg");
+    width: 40%;
+    margin-left: 30%;
+    text-align: center;
+}
+
+.checkbox .container-title2 {
+    font-family: "Verdana", Times, serif;
+    content: url("../icons/secondSetOfFilters.jpg");
+    width: 40%;
+    margin-left: 30%;
     text-align: center;
 }
 
@@ -95,6 +111,7 @@
     bottom: 4px;
     height: 24px;
     width: 24px;
+    border-radius: 12px;
     background-color: #eee;
 }
 

@@ -9,7 +9,6 @@
 </head>
 <body>
 <div class="nav-bar">
-    <!--        DE ADAUGAT DOCUMENTATIA -->
     <a class="item-home" title="Home">Press me</a>
     <a class="item-contact" href="#contact" title="Contact us">Press me</a>
     <a class="item-lang" href="#" title="Documentation">Press me</a>
@@ -40,30 +39,28 @@
         </div>
     </div>
     <div class="grid results">
-<!--        DE ADAUGAT AICI PAGINA CARE TE CONDUCE LA STEP 1 > ALEGE UN CHART-->
-        <a href="http://localhost/OBIS/public/results/index"><img src="../../../public/icons/stats.png" title="Show charts and results" alt=""></a>
+        <a href="http://localhost/OBIS/public/results/index"><img src="../../../public/icons/stats.png"
+                                                                  title="Show charts and results" alt=""></a>
     </div>
     <div class="empty-pre"></div>
     <div class="interactiveRequest">
-<div class="someText">
-
-The number of obese
-<script type="module" src="http://localhost/OBIS/public/JavaScript/dropdownGOptionSelected.js"></script>
-<select id="dropdownG" name="locality"></select>
-<script type="text/javascript" src="http://localhost/OBIS/public/JavaScript/buildDropdownGender.js"></script>
- in
- <script type="module" src="http://localhost/OBIS/public/JavaScript/dropdownLocatiiOptionSelected.js"></script>
-<select id="dropdownLocatii" name="locality"></select>
-<script type="text/javascript" src="http://localhost/OBIS/public/JavaScript/buildDropdownLocatii.js"></script>
-in the year
-<script type="module" src="http://localhost/OBIS/public/JavaScript/requestF.js"></script>
-<script type="module" src="http://localhost/OBIS/public/JavaScript/dropdownAniOptionSelected.js"></script>
-<select id="dropdownAni" name="locality"></select>
-<script type="text/javascript" src="http://localhost/OBIS/public/JavaScript/buildDropdownAni.js"></script>
-was:
-</div>
-<b id='rezultat'></b>
-</div>
+        <div class="someText">
+            The number of obese
+            <script type="module" src="http://localhost/OBIS/public/JavaScript/dropdownGOptionSelected.js"></script>
+            <label for="dropdownG"></label><select class="submit" id="dropdownG" name="locality"></select>
+            <script src="http://localhost/OBIS/public/JavaScript/buildDropdownGender.js"></script>
+            in
+            <script type="module" src="http://localhost/OBIS/public/JavaScript/dropdownLocatiiOptionSelected.js"></script>
+            <label for="dropdownLocatii"></label><select class="submit" id="dropdownLocatii" name="locality"></select>
+            <script src="http://localhost/OBIS/public/JavaScript/buildDropdownLocatii.js"></script>
+            in the year
+            <script type="module" src="http://localhost/OBIS/public/JavaScript/requestF.js"></script>
+            <script type="module" src="http://localhost/OBIS/public/JavaScript/dropdownAniOptionSelected.js"></script>
+            <label for="dropdownAni"></label><select class="submit" id="dropdownAni" name="locality"></select>
+            <script src="http://localhost/OBIS/public/JavaScript/buildDropdownAni.js"></script>
+            was: <b id='rezultat'></b>
+        </div>
+    </div>
 </div>
 <footer>
     <!--<div class="breakLine"></div><br><br>-->

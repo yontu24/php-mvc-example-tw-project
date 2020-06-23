@@ -1,10 +1,3 @@
-
-
-
-html {
-    /*display: block;*/
-}
-
 body {
     background: linear-gradient(58deg, #428d38 20%, rgba(43, 39, 45, 0.8813725319229254) 68%, rgba(206, 190, 214, 0.8813725319229254) 87%);
     margin: 0;
@@ -16,18 +9,17 @@ body {
     text-align: justify;
     letter-spacing: 2px;
 }
+
 /* butoane de export */
-.export_btns{
-  height: 10%;
-
-  display: inline;
-  width: 10%;
-
-
+.export_btns {
+    height: 10%;
+    display: inline;
+    width: 10%;
 }
+
 .btn {
     border: none;
-    font-family: 'Lato';
+    font-family: 'Lato', serif;
     font-size: inherit;
     color: inherit;
     background: none;
@@ -57,7 +49,7 @@ body {
 
 /* Pseudo elements for icons */
 .btn:before {
-    font-family: 'FontAwesome';
+    font-family: 'FontAwesome', serif;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -71,17 +63,17 @@ body {
 
 /* Icon separator */
 .btn-sep {
-    padding: 25px 60px 25px 120px;
+    padding: 25px 60px 25px 90px;
 }
 
 .btn-sep:before {
-    background: rgba(0,0,0,0.15);
+    background: rgba(0, 0, 0, 0.15);
 }
 
 /* Button 1 */
 .btn-1 {
-    background: #428d38;
-    color: #2a2532;
+    background: #6bc29b;
+    color: #2f3030;
 }
 
 .btn-1:hover {
@@ -102,18 +94,21 @@ body {
     font-size: 140%;
     width: 20%;
 }
+
 .icon-info:before {
 
     content: "";
     background: url("../icons/image.png") no-repeat 0 0;
     background-size: 85%;
 }
+
 .icon-back:before {
 
     content: "";
     background: url("../icons/back.png") no-repeat 0 0;
     background-size: 85%;
 }
+
 /*container*/
 .container {
     background-color: white;
@@ -122,12 +117,14 @@ body {
     margin-top: 6vw;
     padding-top: 25px;
 }
+
 /* text pe care il scriu inainte de chart*/
-#chart_introduction{
-  font:Lucida Bright;
-  font-size: 40;
-  text-align: center;
+#chart_introduction {
+    font-family: 'Lucida Bright', serif;
+    font-size: 40px;
+    text-align: center;
 }
+
 /*#chart_div{
 
 
@@ -136,12 +133,14 @@ body {
 
 }*/
 .chart {
-  width: 100%;
-  min-height: 450px;
+    width: 100%;
+    min-height: 450px;
 }
+
 .row {
-  margin:0 !important;
+    margin: 0 !important;
 }
+
 /*scrollbar*/
 body::-webkit-scrollbar {
     width: 9px;
@@ -155,6 +154,7 @@ body::-webkit-scrollbar-thumb {
     background: #2a5c24;
     border-radius: 5px;
 }
+
 /*navbar*/
 .nav-bar {
     overflow: hidden;
@@ -186,6 +186,7 @@ body::-webkit-scrollbar-thumb {
 .nav-bar a:first-child {
     margin-right: auto;
 }
+
 /*iconite de pe bara*/
 .item-home {
     content: url("../icons/home-logo.png");

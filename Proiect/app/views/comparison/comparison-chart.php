@@ -4,13 +4,15 @@ $data = $data1;
 //print_r($data);
 //echo '</pre>';
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <!--Load the AJAX API-->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Comparison</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://localhost/OBIS/public/style/StatisticsChart.css">
-    <script type="text/javascript">
+    <script>
         // Load the Visualization API and the piechart package.
         google.charts.load('current', {'packages': ['corechart']});
 
@@ -47,7 +49,6 @@ $data = $data1;
                 title: 'Obesity of ' + loc1 + " (year(s): " + year1 + ", response: " + res1 + ")" +
                     " in comparison with " + loc2 + " (year(s): " + year2 + ", response: " + res2 + ")" +
                     " rendered on " + category,
-                description: 'Nu stiu ce sa pun aici',
                 legend: {position: 'bottom'},
                 colors: ['#4c4a4e', '#428d38'],
                 explorer: {
@@ -64,7 +65,7 @@ $data = $data1;
 
             var chart;
             if (representation === "1") {
-               chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+                chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
             } else if (representation === "2") {
                 chart = new google.visualization.BarChart(document.getElementById('chart_div'));
             } else if (representation === "3") {
@@ -116,25 +117,24 @@ $data = $data1;
 
         window.addEventListener('resize', drawChart);
     </script>
+    <style>.nav-bar {
+            position: unset;
+        }</style>
 </head>
 
 <body>
-<!--Div that will hold the pie chart-->
-<style>.nav-bar {
-        position: unset;
-    }</style>
 <div class="nav-bar">
     <!--        DE ADAUGAT DOCUMENTATIA -->
-    <a class="item-home" href="../../public/index" title="Home">Press me</a>
+    <a class="item-home" href="../../public/home/index/" title="Home">Press me</a>
     <a class="item-lang" href="#" title="Documentation">Press me</a>
 </div>
 <div class="container">
-    <button class="btn btn-1 btn-sep icon-back" onclick="window.location.href='../../public/results/index'" type="button">
+    <button class="btn btn-1 btn-sep icon-back" onclick="window.location.href='../../public/results/index'"
+            type="button">
         Draw another chart
     </button>
     <div id="chart_introduction">
         <br>The results for the filters you applied are: <br><br>
-
     </div>
     <div class="row">
         <div id="chart_div" class="chart"></div>

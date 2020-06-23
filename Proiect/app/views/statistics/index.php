@@ -10,26 +10,30 @@ $categories = $data4;
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Results</title>
-    <link rel="stylesheet" type="text/css" href="http://localhost/OBIS/public/style/statistics.css">
+    <title>Statistics</title>
+
+
+    <!--    ultima modificare aici-->
+
+
+    <link rel="stylesheet" type="text/css" href="http://localhost/OBIS/public/style/checkboxes_compare.css">
     <link rel="stylesheet" type="text/css" href="http://localhost/OBIS/public/style/index.css">
     <link rel="icon" href="../../../public/icons/webicon.png" type="image/x-icon">
+    <style>.nav-bar {
+            position: unset;
+        }</style>
 </head>
 <body>
 <div class="nav-bar">
-    <!--        DE ADAUGAT DOCUMENTATIA -->
-    <a class="item-home" href="../../public/index.php" title="Home">Press me</a>
-    <a class="item-contact" href="#contact" title="Contact us">Press me</a>
+    <a class="item-home" href="../../public/home/index/" title="Home">Press me</a>
     <a class="item-lang" href="#" title="Documentation">Press me</a>
-    <style>.nav-bar{position: unset;}</style>
 </div>
 <div class="container">
-
     <div class="stepText">
-      <img id="s1img" src="../../public/icons/thirdStep.jpg">
-      <br><br>
-      Check the filters you want to apply to the data rendered on the chart from bellow.<br><br>
-      You can also choose multiple options from the same filter.<br><br>
+        <img id="s1img" src="../../public/icons/thirdStep.jpg" alt="">
+        <br><br>
+        Check the filters you want to apply to the data rendered on the chart from bellow.<br><br>
+        You can also choose multiple options from the same filter.<br><br>
     </div>
     <form action="stats" method="post">
         <div class="checkbox">
@@ -48,6 +52,24 @@ $categories = $data4;
                     </div>
                 </li>
                 <li class="item">
+                    <h1 class="filterTitle">Choose weight category</h1>
+                    <div class="checkbox-container">
+                        <?php
+                        foreach ($responses as $response):
+                            $cuv = explode(" ", $response[0]); ?>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name=<?= $cuv[0] ?> value=<?= $response[1] ?> >
+                                <span class="checkmark"></span>
+                            </label> <?php echo $response[0] ?> <br>
+                        <?php endforeach; ?>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="checkbox">
+            <ul class="checkboxList">
+                <li class="item">
                     <h1 class="filterTitle">Choose a Year</h1>
                     <div class="checkbox-container">
                         <?php
@@ -60,25 +82,12 @@ $categories = $data4;
                     </div>
                 </li>
                 <li class="item">
-                    <h1 class="filterTitle">Choose weight category</h1>
-                    <div class="checkbox-container">
-                        <?php
-                        foreach ($responses as $response):
-                            $cuv = explode(" ", $response[0]);?>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name=<?= $cuv[0] ?> value=<?= $response[1] ?> >
-                                <span class="checkmark"></span>
-                            </label> <?php echo $response[0] ?> <br>
-                        <?php endforeach; ?>
-                    </div>
-                </li>
-                <li class="item">
                     <h1 class="filterTitle">Choose a breakout category</h1>
                     <div class="checkbox-container">
                         <?php
                         foreach ($categories as $category):?>
                             <label class="checkbox-label">
-                                <input type="radio" name="filterCategory" value=<?=$category[1]?> checked >
+                                <input type="radio" name="filterCategory" value=<?= $category[1] ?> checked>
                                 <span class="checkmark"></span>
                             </label> <?php echo $category[0] ?> <br>
                         <?php endforeach; ?>
@@ -86,18 +95,17 @@ $categories = $data4;
                 </li>
             </ul>
         </div>
-        <input class="submit" type="submit" name="action" value="Submit">
-
+        <div class="submit2">
+            <input class="submit" type="submit" name="action" value="Submit">
+        </div>
     </form>
-
     <br><br>
     <div class="stepText">
-    Want to modify your choices?<br>
-
-    <form>
-<input type="button" class="submit" value="Return to previous step" onClick="javascript:history.go(-1)" />
-</form>
-</div>
+        Want to modify your choices?<br>
+        <form>
+            <input type="button" class="submit" value="Return to previous step" onClick="history.go(-1)"/>
+        </form>
+    </div>
 </div>
 </body>
 </html>
