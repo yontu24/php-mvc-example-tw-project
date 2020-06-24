@@ -26,22 +26,25 @@
         <form action="../comparisons/index" method="post">
             <div class="CorS">
                 <img src="../../public/icons/columnIcon.png" class="checkImg" alt="">
-                <label>
+                <label class="checkbox-label">
                     <input type="radio" name="filterChart" value='1' checked>
+                    <span class="checkmark"></span>
                 </label>Column Chart<br>
             </div>
             <br><br>
             <div class="CorS">
                 <img src="../../public/icons/lineIcon.png" class="checkImg" alt="">
-                <label>
+                <label class="checkbox-label">
                     <input type="radio" name="filterChart" value='2'>
+                    <span class="checkmark"></span>
                 </label>Line Chart<br>
             </div>
             <br><br>
             <div class="CorS">
                 <img src="../../public/icons/barIcon.png" class="checkImg" alt="">
-                <label>
+                <label class="checkbox-label">
                     <input type="radio" name="filterChart" value='3'>
+                    <span class="checkmark"></span>
                 </label>Bar Chart<br>
             </div>
             <input type="submit" name="action" value="Submit" class="submit">

@@ -26,22 +26,25 @@
         <form action="../statistics/index" method="post">
             <div class="CorS">
                 <img src="../../public/icons/pieIcon.png" class="checkImg" alt="">
-                <label>
+                <label class="checkbox-label">
                     <input type="radio" name="filterChart" value='piechart' checked>
+                    <span class="checkmark"></span>
                 </label>Pie Chart<br>
             </div>
             <br><br>
             <div class="CorS">
                 <img src="../../public/icons/lineIcon.png" class="checkImg" alt="">
-                <label>
+                <label class="checkbox-label">
                     <input type="radio" name="filterChart" value='linechart'>
+                    <span class="checkmark"></span>
                 </label>Line Chart<br>
             </div>
             <br><br>
             <div class="CorS">
                 <img src="../../public/icons/barIcon.png" class="checkImg" alt="">
-                <label>
+                <label class="checkbox-label">
                     <input type="radio" name="filterChart" value='barchart'>
+                    <span class="checkmark"></span>
                 </label>Bar Chart<br>
             </div>
             <input type="submit" name="action" value="Submit" class="submit">

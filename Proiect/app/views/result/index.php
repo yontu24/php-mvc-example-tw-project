@@ -26,15 +26,17 @@
         <form action="formularTip" method="post">
             <div class="CorS">
                 <img src="../../public/icons/comparisons.png" class="checkImg" alt="">
-                <label>
+                <label class="checkbox-label">
                     <input type="radio" name="filterAction" value='comparison' checked>
+                    <span class="checkmark"></span>
                 </label>Comparison<br>
             </div>
             <br><br>
             <div class="CorS">
                 <img src="../../public/icons/statistics.png" class="checkImg" alt="">
-                <label>
+                <label class="checkbox-label">
                     <input type="radio" name="filterAction" value='statistics'>
+                    <span class="checkmark"></span>
                 </label>Statistics<br>
             </div>
             <input type="submit" name="action" value="Submit" class="submit">

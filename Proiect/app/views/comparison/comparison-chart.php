@@ -74,7 +74,8 @@ $data = $data1;
             chart.draw(data, options);
 
 
-            var btnSave = document.getElementById('savepng');
+            // WEBP
+            var btnSave = document.getElementById('savewebp');
             google.visualization.events.addListener(chart, 'ready', function () {
                 btnSave.disabled = false;
             });
@@ -83,12 +84,13 @@ $data = $data1;
                 var imgUri = chart.getImageURI();
                 let link = document.createElement('a');
                 link.href = imgUri;
-                link.download = "chart.png";
+                link.download = "dateChart.webp";
                 link.click();
                 link = null;
             }, false);
 
 
+            // PDF
             var btnSave1 = document.getElementById('savepdf');
             google.visualization.events.addListener(chart, 'ready', function () {
                 btnSave1.disabled = false;
@@ -97,15 +99,31 @@ $data = $data1;
             btnSave1.addEventListener('click', function () {
                 var doc = new jsPDF();
                 doc.addImage(chart.getImageURI(), 0, 0);
-                doc.save('chart.pdf');
+                doc.save('dateChart.pdf');
             }, false);
 
-            var btnSave2 = document.getElementById('savecsv');
+
+            // SVG
+            var btnSave2 = document.getElementById('savesvg');
+            btnSave2.addEventListener('click', function () {
+                var svgAsXML = (new XMLSerializer).serializeToString(document.getElementsByTagName('svg')[0]);
+                var svgData = "data:image/svg+xml," + encodeURIComponent(svgAsXML);
+
+                let link1 = document.createElement('a');
+                link1.setAttribute('href',"data:image/svg+xml," + encodeURIComponent(svgAsXML));
+                link1.setAttribute('download', 'dateChart.svg');
+                link1.click();
+                link1 = null;
+            }, false);
+
+
+            // CSV
+            var btnSave3 = document.getElementById('savecsv');
             google.visualization.events.addListener(chart, 'ready', function () {
-                btnSave2.disabled = false;
+                btnSave3.disabled = false;
             });
 
-            btnSave2.addEventListener('click', function () {
+            btnSave3.addEventListener('click', function () {
                 var csv1 = google.visualization.dataTableToCsv(data);
                 let link1 = document.createElement('a');
                 link1.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(csv1));
@@ -140,9 +158,10 @@ $data = $data1;
         <div id="chart_div" class="chart"></div>
     </div>
     <div class="export_btns">
-        <button class="btn btn-1 btn-sep icon-info" id="savepdf" type="button">Export as PDF File</button>
-        <button class="btn btn-1 btn-sep icon-info" id="savepng" type="button">Export as PNG File</button>
-        <button class="btn btn-1 btn-sep icon-info" id="savecsv" type="button">Export as CSV File</button>
+      <button class="btn btn-1 btn-sep icon-info" id="savepdf" type="button">Export as PDF File</button>
+      <button class="btn btn-1 btn-sep icon-info" id="savewebp" type="button">Export as WEBP File</button>
+      <button class="btn btn-1 btn-sep icon-info" id="savecsv" type="button">Export as CSV File</button>
+      <button class="btn btn-1 btn-sep icon-info" id="savesvg" type="button">Export as SVG File</button>
     </div>
 </div>
 </body>
