@@ -18,28 +18,27 @@
         <li class="item"><a href="#str" title="Structura">4. Structura</a></li>
         <li class="remove-dot">
             <ul>
-                <li class="item"><a href="#str" title="Front-end">Front-end</a></li>
-                <li class="item"><a href="#str" title="Back-end">Back-end</a></li>
-                <li class="item"><a href="#str" title="Integrare">Integrare</a></li>
+                <li class="item"><a href="#str" title="Front-end">4.1 Front-end</a></li>
+                <li class="item"><a href="#str" title="Back-end">4.2 Back-end</a></li>
             </ul>
         </li>
-        <li class="item"><a href="#tw" title="Tehnologii folosite">Tehnologii folosite</a></li>
-        <li class="item"><a href="#mt" title="Metodologii">Metodologii</a></li>
+        <li class="item"><a href="#tw" title="Tehnologii folosite">5. Tehnologii folosite</a></li>
+        <li class="item"><a href="#mt" title="Metodologii">6. Metodologii</a></li>
         <li class="remove-dot">
             <ul>
-                <li class="item"><a title="GitHub">GitHub</a></li>
-                <li class="item"><a title="Kanban">Kanban</a></li>
-                <li class="item"><a title="Agile">Agile</a></li>
+                <li class="item"><a title="GitHub">6.1 GitHub</a></li>
+                <li class="item"><a title="Kanban">6.2 Kanban</a></li>
+                <li class="item"><a title="Agile">6.3 Agile</a></li>
             </ul>
         </li>
-        <li class="item"><a href="#tasks" title="Sarcini"></a></li>
-        <li class="item"><a href="#contact" title="Contact">Contact</a></li>
-        <li class="item"><a href="#bibl" title="Bibliografie">Bibliografie</a></li>
+        <li class="item"><a href="#tasks" title="Sarcini">7. Sarcini</a></li>
+        <li class="item"><a href="#contact" title="Contact">8. Contact</a></li>
+        <li class="item"><a href="#bibl" title="Bibliografie">9. Bibliografie</a></li>
     </ul>
 
     <section id="abtr">
         <div>
-            <h3 class="title-container">Abstract</h3>
+            <h3 class="title-container">1. Abstract</h3>
             <div>Numele proiectului Obis vine de la Obesity Prevalence Visualizer si se refera la
                 o platforma web pe care se pot vizualiza diferite statistici bazate
                 pe ani, locatii si categorii de greutate a persoanelor din SUA randate in functie
@@ -50,7 +49,7 @@
 
     <section id="intro">
         <div>
-            <h3 class="title-container">Introducere</h3>
+            <h3 class="title-container">2. Introducere</h3>
             <div>
                 Aplicatia ofera acces utilizatorilor la vizualizarea datelor colectate de <em>Behavioral Risk Factor
                     Surveillance System</em> prin intermediul unui API REST propriu. Utilizatorul poate alege diferite
@@ -62,7 +61,7 @@
 
     <section id="arh">
         <div>
-            <h3 class="title-container">Arhitectura</h3>
+            <h3 class="title-container">3. Arhitectura</h3>
             <div>Arhitectura aleasa este cea de tip MVC (Model-View-Controller) ce separa structura codului in 3 parti:
             </div>
             <ul>
@@ -104,10 +103,10 @@
 
     <section id="str">
         <div>
-            <h3 class="title-container">Structura</h3>
+            <h3 class="title-container">4. Structura</h3>
             <ul>
                 <li>
-                    <div class="sub-list">Front-end</div>
+                    <div class="sub-list">4.1 Front-end</div>
                     <div>
                         Partea de frontend a fost construita cu HTML5 si CSS3 pentru design-ul tag-urilor cat si pentru
                         adaugarea de efecte/tranzitii animate. Aceasta contine si o sectiune care randeaza date dinamic
@@ -115,7 +114,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="sub-list">Back-end</div>
+                    <div class="sub-list">4.2 Back-end</div>
                     <div>
                         <ul>
                             <li>
@@ -132,12 +131,12 @@ $app = new App();
                                 </div>
                             </li>
                             <li>
-                                <div class="sub-list">App</div>
+                                <div class="sub-list">4.2.1 App</div>
                                 <div>
                                     Folderul App contine aplicatia realizata dupa sablonul MVC.
                                     <ul>
                                         <li>
-                                            <div class="sub-list">Core <br></div>
+                                            <div class="sub-list">4.2.1.1 Core <br></div>
                                             <div>
                                                 Contine clasele de baza care dau logica aplicatiei.
                                                 <pre>
@@ -207,7 +206,7 @@ $app = new App();
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="sub-list">Controllers</div>
+                                            <div class="sub-list">4.2.1.2 Controllers</div>
                                             <div>
                                                 Sunt extinse din core/Controller si sunt responsabile de
                                                 comportamentul
@@ -261,7 +260,7 @@ $app = new App();
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="sub-list">Models</div>
+                                            <div class="sub-list">4.2.1.3 Models</div>
                                             <div>
                                                 Cuprinde clasele responsabile de schimbul de informatii cu API REST.
                                                 Fiecare clasa va face o
@@ -299,7 +298,7 @@ $app = new App();
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="sub-list">Views</div>
+                                            <div class="sub-list">4.2.1.4 Views</div>
                                             <div>
                                                 Contine paginile oferite prin intermediul aplicatiei. <br>
                                                 Home: pagina principala contine date generale despre obezitate si
@@ -339,19 +338,19 @@ $app = new App();
                     </div>
                 </li>
                 <li>
-                    <div class="sub-list">API REST</div>
+                    <div class="sub-list">4.2.2 API REST</div>
                     <div>
                         Ofera o reprezentare a informatiilor din baza de date in functie de cererea procesata.
                         <ul>
                             <li>
-                                <div class="sub-list">Models</div>
+                                <div class="sub-list">4.2.2.1 Models</div>
                                 <div>
                                     - contine clasele corespunzatoare fiecarui substantiv responsabile
                                     de comunicarea cu baza de date.
                                 </div>
                             </li>
                             <li>
-                                <div class="sub-list">API</div>
+                                <div class="sub-list">4.2.2.2 API</div>
                                 <div>
                                     - contine fiserele corespunzatoare fiecarui predicat ce va fi folosit de utilizator.
                                 </div>
@@ -365,7 +364,7 @@ $app = new App();
 
     <section id="tw">
         <div>
-            <h3 class="title-container">Tehnologii folosite</h3>
+            <h3 class="title-container">5. Tehnologii folosite</h3>
             <ul>
                 <li class="sub-list"><a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a></li>
                 <li class="sub-list"><a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a></li>
@@ -377,11 +376,11 @@ $app = new App();
 
     <section id="mt">
         <div>
-            <h3 class="title-container">Metodologii folosite</h3>
+            <h3 class="title-container">6. Metodologii folosite</h3>
             <ul>
-                <li class="sub-list"><a href="https://github.com/">GitHub</a></li>
-                <li class="sub-list">Kanban</li>
-                <li class="sub-list">Agile</li>
+                <li class="sub-list"><a href="https://github.com/">6.1 GitHub</a></li>
+                <li class="sub-list">6.2 Kanban</li>
+                <li class="sub-list">6.3 Agile</li>
                 <li>
                     <div>
                         Modelele de dezvoltare folosite in decursul implementarii codului au fost agile din punct de
@@ -396,7 +395,7 @@ $app = new App();
 
     <section id="tasks">
         <div>
-            <h3 class="title-container">Sarcini</h3>
+            <h3 class="title-container">7. Sarcini</h3>
             <ul>
                 <li>
                     <div class="sub-list">
@@ -478,7 +477,7 @@ $app = new App();
 
     <section id="contact">
         <div>
-            <h3 class="title-container">Contact</h3>
+            <h3 class="title-container">8. Contact</h3>
             <ul>
                 <li class="sub-list">Ivascu Vlad-Alexandru</li>
                 <li class="remove-dot">
@@ -510,24 +509,18 @@ $app = new App();
 
     <section id="bibl">
         <div>
-            <h3 class="title-container">Bibliografie</h3>
+            <h3 class="title-container">9. Bibliografie</h3>
             <ul>
                 <li class="sub-list"><a href="https://profs.info.uaic.ro/~andrei.panu/">Web Technologies Dr. Andrei
                         Panu</a></li>
                 <li class="sub-list"><a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/">Tehnologii Web Dr.
                         Sabin-Corneliu Buraga</a></li>
                 <li class="sub-list"><a
-                            href="https://medium.com/datadriveninvestor/model-view-controller-mvc-75bcb0103d66">Model-View-Controller
-                        picture</a></li>
-                <li class="sub-list"><a
                             href="https://www.geeksforgeeks.org/javascript-importing-and-exporting-modules/">Importing
                         and
                         exporting modules</a></li>
                 <li class="sub-list"><a href="https://developers.google.com/chart/interactive/docs/printing">Printing
                         PNG Charts</a></li>
-                <li class="sub-list"><a
-                            href="https://stackoverflow.com/questions/18595651/saving-and-printing-a-google-chart">stackoverflow:
-                        Saving and printing a google chart</a></li>
                 <li class="sub-list"><a href="https://developers.google.com/chart">Google charts</a></li>
                 <li class="sub-list"><a href="https://www.iconfinder.com/">Icon finder: Pictures</a></li>
                 <li class="sub-list"><a href="https://validator.w3.org/">W3C Markup Validation Service</a></li>
