@@ -353,7 +353,7 @@ $app = new App();
                             <li>
                                 <div class="sub-list">API</div>
                                 <div>
-                                    - contine fiserele care interactioneaza cu utilizatorul.
+                                    - contine fiserele corespunzatoare fiecarui predicat ce va fi folosit de utilizator.
                                 </div>
                             </li>
                         </ul>
