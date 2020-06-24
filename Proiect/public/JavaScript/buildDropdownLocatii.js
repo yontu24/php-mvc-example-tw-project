@@ -8,7 +8,7 @@ dropdownLocatii.add(defaultOption2);
 dropdownLocatii.selectedIndex = 0;
 
 function CDropdownLocatii(){
-const url2 = 'http://localhost/OBIS/REST/api/info/read.php?locatie=true';
+const url2 = 'http://localhost/OBIS/REST/api/info/locatii/read.php';
 
 const request2 = new XMLHttpRequest();
 request2.open('GET', url2, true);
@@ -27,7 +27,7 @@ request2.onload = function() {
 	} else {
 		// Reached the server, but it returned an error
 	}
-}
+};
 
 request2.onerror = function() {
 	console.error('An error occurred fetching the JSON from ' + url);

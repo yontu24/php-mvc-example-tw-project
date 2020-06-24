@@ -17,7 +17,7 @@ function CDropdownAni(){
 	dropdownAni.add(defaultOption1);
 	dropdownAni.selectedIndex = 0;
 
-	const url1 = 'http://localhost/OBIS/REST/api/info/read.php?an=true';
+	const url1 = 'http://localhost/OBIS/REST/api/info/ani/read.php';
 
 	const request1 = new XMLHttpRequest();
 	request1.open('GET', url1);
@@ -34,8 +34,7 @@ function CDropdownAni(){
 		} else {
 			// Reached the server, but it returned an error
 		}
-	}
-
+	};
 
 	request1.setRequestHeader('Content-Type', 'application/json');
 
