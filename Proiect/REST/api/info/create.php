@@ -55,7 +55,7 @@ if (!empty($data->an) && !empty($data->locatie)  && !empty($data->break_out) && 
     }
 }else{
     http_response_code(404);
-    echo json_encode(array("message" => "Wrong parameters (ex: jwt, an, locatie, break_out, categorie(CAT1-6), nr_cazuri, id_break_out, id_categorie, id_raspuns(RESP039-42)"));
+    echo json_encode(array("message" => "Wrong parameters (ex: jwt, an, locatie, break_out, nr_cazuri, id_break_out, id_categorie(CAT1-6), id_raspuns(RESP039-42)"));
 }
 
 ?>
