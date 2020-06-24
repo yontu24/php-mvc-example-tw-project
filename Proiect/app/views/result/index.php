@@ -13,7 +13,7 @@
 <body>
 <div class="nav-bar">
     <a class="item-home" href="../../public/home/index/" title="Home">Press me</a>
-    <a class="item-lang" href="#" title="Documentation">Press me</a>
+    <a class="item-lang" href="../../public/home/documentation" title="Documentation">Press me</a>
 </div>
 <div class="container">
     <div class="stepText">

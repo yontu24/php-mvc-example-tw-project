@@ -39,6 +39,11 @@
 
 }
 
+.category {
+    display: grid;
+    justify-content: center;
+}
+
 .checkboxList {
     display: inline-block;
     list-style-type: none;
@@ -148,4 +153,58 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .filterTitle {
+        font-size: 12px;
+    }
+
+    .stepText {
+        font-size: 12px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .filterTitle {
+        font-size: 12px;
+    }
+
+    .stepText {
+        font-size: 12px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .filterTitle {
+        font-size: 12px;
+    }
+
+    .stepText {
+        font-size: 12px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .filterTitle {
+        font-size: 22px;
+    }
+
+    .stepText {
+        font-size: 12px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .filterTitle {
+        font-size: 22px;
+    }
+    .filterTitle {
+        font-size: 12px;
+    }
 }

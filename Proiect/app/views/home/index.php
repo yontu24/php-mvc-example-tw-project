@@ -11,7 +11,7 @@
 <div class="nav-bar">
     <a class="item-home" title="Home">Press me</a>
     <a class="item-contact" href="#contact" title="Contact us">Press me</a>
-    <a class="item-lang" href="#" title="Documentation">Press me</a>
+    <a class="item-lang" href="../documentation" title="Documentation">Press me</a>
 </div>
 <div class="container">
     <h1 class="title-font">Behavioral Risk Factor Surveillance System</h1>
@@ -43,24 +43,7 @@
                                                                   title="Show charts and results" alt=""></a>
     </div>
     <div class="empty-pre"></div>
-    <div class="interactiveRequest">
-        <div class="someText">
-            The number of obese
-            <script type="module" src="http://localhost/OBIS/public/JavaScript/dropdownGOptionSelected.js"></script>
-            <label for="dropdownG"></label><select class="submit" id="dropdownG" name="locality"></select>
-            <script src="http://localhost/OBIS/public/JavaScript/buildDropdownGender.js"></script>
-            in
-            <script type="module" src="http://localhost/OBIS/public/JavaScript/dropdownLocatiiOptionSelected.js"></script>
-            <label for="dropdownLocatii"></label><select class="submit" id="dropdownLocatii" name="locality"></select>
-            <script src="http://localhost/OBIS/public/JavaScript/buildDropdownLocatii.js"></script>
-            in the year
-            <script type="module" src="http://localhost/OBIS/public/JavaScript/requestF.js"></script>
-            <script type="module" src="http://localhost/OBIS/public/JavaScript/dropdownAniOptionSelected.js"></script>
-            <label for="dropdownAni"></label><select class="submit" id="dropdownAni" name="locality"></select>
-            <script src="http://localhost/OBIS/public/JavaScript/buildDropdownAni.js"></script>
-            was: <b id='rezultat'></b>
-        </div>
-    </div>
+    <?php require_once "../public/JavaScript/aplicatie.php";?>
 </div>
 <footer>
     <!--<div class="breakLine"></div><br><br>-->

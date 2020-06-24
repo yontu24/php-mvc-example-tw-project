@@ -126,7 +126,7 @@ $data = $data1;
 <div class="nav-bar">
     <!--        DE ADAUGAT DOCUMENTATIA -->
     <a class="item-home" href="../../public/home/index/" title="Home">Press me</a>
-    <a class="item-lang" href="#" title="Documentation">Press me</a>
+    <a class="item-lang" href="../../public/home/documentation" title="Documentation">Press me</a>
 </div>
 <div class="container">
     <button class="btn btn-1 btn-sep icon-back" onclick="window.location.href='../../public/results/index'"

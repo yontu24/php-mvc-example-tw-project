@@ -8,4 +8,9 @@ class Home extends Controller
         // asta se va gasi in app/view
         $this->view('home/index');
     }
+
+    public function documentation()
+    {
+        $this->view('home/documentation');
+    }
 }

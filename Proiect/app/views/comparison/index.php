@@ -17,8 +17,10 @@ $categories = $data4;
 </head>
 <div class="nav-bar">
     <a class="item-home" href="../../public/home/index/" title="Home">Press me</a>
-    <a class="item-lang" href="#" title="Documentation">Press me</a>
-    <style>.nav-bar{position: unset;}</style>
+    <a class="item-lang" href="../../public/home/documentation" title="Documentation">Press me</a>
+    <style>.nav-bar {
+            position: unset;
+        }</style>
 </div>
 <body>
 <div class="container">
@@ -39,7 +41,7 @@ $categories = $data4;
                         foreach ($locations as $var):?>
                             <label class="checkbox-label">
                                 <input type="checkbox"
-                                       name="location#1[<?php echo $var?>]" value="<?=$var?>">
+                                       name="location#1[<?php echo $var ?>]" value="<?= $var ?>">
                                 <span class="checkmark"></span>
                             </label> <?php echo $var ?> <br>
                         <?php endforeach; ?>
@@ -52,7 +54,7 @@ $categories = $data4;
                         foreach ($years as $year):?>
                             <label class="checkbox-label">
                                 <input type="checkbox"
-                                       name="year#1[<?php echo $year?>]" value="<?=$year?>">
+                                       name="year#1[<?php echo $year ?>]" value="<?= $year ?>">
                                 <span class="checkmark"></span>
                             </label> <?php echo $year ?> <br>
                         <?php endforeach; ?>
@@ -84,7 +86,7 @@ $categories = $data4;
                         foreach ($locations as $var):?>
                             <label class="checkbox-label">
                                 <input type="checkbox"
-                                       name="location#2[<?php echo $var?>]" value="<?=$var?>">
+                                       name="location#2[<?php echo $var ?>]" value="<?= $var ?>">
                                 <span class="checkmark"></span>
                             </label> <?php echo $var ?> <br>
                         <?php endforeach; ?>
@@ -97,7 +99,7 @@ $categories = $data4;
                         foreach ($years as $year):?>
                             <label class="checkbox-label">
                                 <input type="checkbox"
-                                       name="year#2[<?php echo $year?>]" value="<?=$year?>">
+                                       name="year#2[<?php echo $year ?>]" value="<?= $year ?>">
                                 <span class="checkmark"></span>
                             </label> <?php echo $year ?> <br>
                         <?php endforeach; ?>
@@ -118,22 +120,17 @@ $categories = $data4;
                 </li>
             </ul>
         </div>
-
-        <div class="checkbox-category">
-            <ul class="checkboxList">
-                <li class="item">
-                    <h1 class="filterTitle">Render by</h1>
-                    <div class="checkbox-container">
-                        <?php
-                        foreach ($categories as $category):?>
-                            <label class="checkbox-label">
-                                <input type="radio" name="filterCategory" value=<?= $category[1] ?> checked>
-                                <span class="checkmark"></span>
-                            </label> <?php echo $category[0] ?> <br>
-                        <?php endforeach; ?>
-                    </div>
-                </li>
-            </ul>
+        <div class="category">
+                <h1 class="filterTitle">Render by</h1>
+                <div class="checkbox-container">
+                    <?php
+                    foreach ($categories as $category):?>
+                        <label class="checkbox-label">
+                            <input type="radio" name="filterCategory" value=<?= $category[1] ?> checked>
+                            <span class="checkmark"></span>
+                        </label> <?php echo $category[0] ?> <br>
+                    <?php endforeach; ?>
+                </div>
         </div>
         <input type="submit" name="action" class="submit" value="Submit">
         <br><br>

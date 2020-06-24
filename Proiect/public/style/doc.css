@@ -1,0 +1,124 @@
+body {
+    background: linear-gradient(58deg, rgba(184, 105, 41, 1) 20%, rgba(43, 39, 45, 0.8813725319229254) 68%, rgba(206, 190, 214, 0.8813725319229254) 87%);
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+    text-indent: 50px;
+    font-family: "Verdana", Courier, monospace;
+    background-size: cover;
+    text-align: justify;
+}
+
+body::-webkit-scrollbar {
+    width: 9px;
+}
+
+body::-webkit-scrollbar-track {
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(184, 105, 41);
+    border-radius: 5px;
+}
+
+.container {
+    margin: 5vw;
+    background-color: white;
+    background-size: cover;
+}
+
+.content-list .item {
+    padding: 10px;
+}
+
+.container .content-list {
+    display: block;
+    justify-content: center;
+}
+
+.container .content {
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+.content-list a {
+    color: #4c4a4e;
+    text-decoration: none;
+    border: 0;
+}
+
+.content-list a:hover {
+    color: white;
+    background: rgb(184, 105, 41);
+    border: 0;
+    height: 20px;
+    width: 60px;
+    padding: 5px;
+}
+
+.title-container {
+    padding-top: 2vw;
+    font-size: 30pt;
+    font-family: 'Comic Sans MS', Courier, monospace;
+    color: #4c4a4e;
+}
+
+section {
+    padding: 25px;
+    text-indent: 50px;
+}
+
+section ul .sub-list {
+    padding: 12px;
+    text-decoration: underline;
+    text-decoration-color: rgb(184, 105, 41);
+}
+
+section div {
+    line-height: 22pt;
+}
+
+section ul {
+    margin-bottom: 40px;
+}
+
+.container img {
+    display: inline-block;
+    width: 70%;
+    height: 70%;
+    margin-left: 15%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.container .custom-button {
+    padding-top: 5px;
+    text-align: center;
+    text-indent: 0;
+    display: block;
+    float: right;
+    width: 50px;
+    height: 45px;
+    background: rgb(184, 105, 41);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    margin: 10px;
+}
+
+.container .custom-button:hover {
+    background: lightgray;
+    color: #4c4a4e;
+    transition: ease-in-out all .2s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.custom-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.remove-dot {
+    list-style-type: none;
+}
